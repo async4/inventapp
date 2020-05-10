@@ -11,7 +11,7 @@ public class app_canvas_pane extends JPanel {
     private static app_canvas_pane canvas_pane;
 
     // Panel arkaplan rengi.
-    private final Color canvas_pane_background_color = new Color( 23, 21, 26);
+    private final Color canvas_pane_background_color = new Color(26, 26, 26);
 
     public app_canvas_pane(){
         this.setBackground(canvas_pane_background_color);

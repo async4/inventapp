@@ -1,17 +1,18 @@
 package com.invent.app_common.window_inventory.weapons_menu.rifles_menu;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import com.invent.app_common.window_inventory.weapons_menu.weapon_menu_pane;
 
-public class rifle_menu_pane extends JPanel implements MouseListener {
+import javax.swing.*;
+
+
+public class rifle_menu_pane extends weapon_menu_pane {
     private static rifle_menu_pane _rifle_menu_pane;
     public rifle_menu_pane() {
-        this.add(new JLabel("Rifles"));
-        this.setBackground(new Color(26, 26, 26));
-        this.setPreferredSize(new Dimension(250, 170));
-        this.addMouseListener(this);
+        super();
+
+        this.panel_title = new JLabel("Rifles");
+        panel_title.setForeground(this.panel_title_fore_ground_color);
+        this.add(panel_title);
     }
 
     public static rifle_menu_pane create_rifle_menu_pane() {
@@ -25,29 +26,9 @@ public class rifle_menu_pane extends JPanel implements MouseListener {
         return _rifle_menu_pane;
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
-
+    public void test() {
+        System.out.println("rifle");
     }
 
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-        this.setBackground(new Color(47, 47, 47));
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-        this.setBackground(new Color(26, 26, 26));
-    }
 }
 

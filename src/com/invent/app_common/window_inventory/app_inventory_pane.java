@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class app_inventory_pane extends JPanel {
     private static app_inventory_pane inventory_pane;
-    private final Color inventory_pane_background_color = new Color(30, 29, 34);
+    private final Color inventory_pane_background_color = new Color(26, 26, 26);
 
     public app_inventory_pane(){
         this.setBackground(inventory_pane_background_color);
