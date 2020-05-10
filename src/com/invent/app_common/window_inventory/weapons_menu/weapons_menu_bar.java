@@ -17,4 +17,8 @@ public class weapons_menu_bar extends JMenuBar {
         return _weapons_menu_bar;
     }
 
+    public static weapons_menu_bar get_weapons_menu_bar() {
+        return _weapons_menu_bar;
+    }
+
 }

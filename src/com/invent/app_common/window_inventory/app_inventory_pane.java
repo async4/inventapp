@@ -1,5 +1,8 @@
 package com.invent.app_common.window_inventory;
 
+import com.invent.app_common.window_inventory.weapons_menu.weapons_menu;
+import com.invent.app_common.window_inventory.weapons_menu.weapons_menu_bar;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,23 +14,14 @@ public class app_inventory_pane extends JPanel {
     public app_inventory_pane(){
         this.setBackground(inventory_pane_background_color);
         this.add(new JLabel("PICK WEAPONS TAB"));
+        // this.setLayout(new BorderLayout());
 
-        JMenuBar weapons_menu_bar = new JMenuBar();
-        JMenu weapons_menu = new JMenu("weapons");
-        JMenuItem weapon_pistols_menu = new JMenu("pistols");
-        JMenuItem weapon_smgs_menu = new JMenu("smgs");
-        JMenuItem weapon_rifles_menu = new JMenu("rifles");
-        weapons_menu.add(weapon_pistols_menu);
-        weapons_menu.add(weapon_smgs_menu);
-        weapons_menu.add(weapon_rifles_menu);
-        weapons_menu_bar.add(weapons_menu);
-        weapons_menu_bar.add(Box.createRigidArea(new Dimension(0,25)));
-        weapons_menu.add(Box.createRigidArea(new Dimension(200,25)));
-        weapon_pistols_menu.add(Box.createRigidArea(new Dimension(100,25)));
-        weapon_smgs_menu.add(Box.createRigidArea(new Dimension(100,25)));
-        weapon_rifles_menu.add(Box.createRigidArea(new Dimension(100,25)));
+        weapons_menu_bar menu_bar = weapons_menu_bar.create_weapons_menu_bar();
+        weapons_menu menu = weapons_menu.create_weapons_menu();
 
-        this.add(weapons_menu_bar);
+        menu_bar.add(menu);
+        this.add(menu_bar);
+
     }
 
     public static app_inventory_pane create_inventory_pane() {
