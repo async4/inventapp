@@ -1,7 +1,8 @@
 package com.invent.app_common.window_inventory;
 
-import com.invent.app_common.window_inventory.weapons_menu.weapons_menu;
-import com.invent.app_common.window_inventory.weapons_menu.weapons_menu_bar;
+import com.invent.app_common.window_inventory.weapons_menu.pistols_menu.pistol_menu_pane;
+import com.invent.app_common.window_inventory.weapons_menu.rifles_menu.rifle_menu_pane;
+import com.invent.app_common.window_inventory.weapons_menu.smgs_menu.smg_menu_pane;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,13 +14,9 @@ public class app_inventory_pane extends JPanel {
     public app_inventory_pane(){
         this.setBackground(inventory_pane_background_color);
         this.add(new JLabel("PICK WEAPONS TAB"));
-
-        weapons_menu_bar menu_bar = weapons_menu_bar.create_weapons_menu_bar();
-        weapons_menu menu = weapons_menu.create_weapons_menu();
-
-        menu_bar.add(menu);
-        this.add(menu_bar);
-
+        this.add(pistol_menu_pane.create_pistol_menu());
+        this.add(smg_menu_pane.create_smg_menu_pane());
+        this.add(rifle_menu_pane.create_rifle_menu_pane());
     }
 
     // Panel nesnesinin tekrardan uretilmesini engellemek icin ve nesneye rahatca ulasmak icin.

@@ -19,6 +19,7 @@ public class weapons_menu extends JMenu implements MouseListener {
         this.add(smgs_menu.create_smgs_menu());
         this.add(rifles_menu.create_rifles_menu());
         this.addMouseListener(this);
+        this.setPreferredSize(new Dimension(155, 10));
     }
 
     public static weapons_menu create_weapons_menu() {

@@ -1,5 +1,8 @@
 package com.invent.app_common.window_inventory.weapons_menu.weapons_rifles_menu;
 
+import com.invent.app_common.window_canvas.user_pane.user_pane;
+import com.invent.app_common.window_canvas.weapon_pane.weapon_pane;
+
 import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -19,7 +22,7 @@ public class rifles_menu extends JMenu implements MouseListener {
         return _rifles_menu;
     }
 
-    public static rifles_menu get_pistols_menu() {
+    public static rifles_menu get_smgs_menu() {
         return _rifles_menu;
     }
 
@@ -41,11 +44,14 @@ public class rifles_menu extends JMenu implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-
+        weapon_pane.get_show_weapon_pane().setVisible(true);
+        user_pane.get_show_user_pane().setVisible(false);
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+        weapon_pane.get_show_weapon_pane().setVisible(false);
+        user_pane.get_show_user_pane().setVisible(true);
 
     }
 }
