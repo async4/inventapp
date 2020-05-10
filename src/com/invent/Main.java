@@ -8,7 +8,10 @@ import javax.swing.*;
 public class Main {
 
     private static void init() {
+        // Ana ekran app_window sinifindan türetilir.
         app_window frame = new app_window();
+
+        // Ana ekranin uzerine icerik paneli eklenir.
         frame.add(new app_content_pane());
     }
 

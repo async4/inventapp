@@ -11,6 +11,7 @@ import java.awt.event.MouseListener;
 
 public class weapons_menu extends JMenu implements MouseListener {
     private static weapons_menu _weapons_menu;
+
     public weapons_menu() {
         this.setText("Weapons");
         this.add(Box.createRigidArea(new Dimension(200,25)));
