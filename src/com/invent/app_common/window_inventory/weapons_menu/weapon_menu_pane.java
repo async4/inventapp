@@ -22,21 +22,6 @@ public class weapon_menu_pane extends JPanel implements MouseListener {
     }
 
     @Override
-    public void mouseClicked(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
     public void mouseEntered(MouseEvent e) {
         this.setBackground(new Color(47, 47, 47));
         this.setBorder(BorderFactory.createLineBorder(Color.white, 1));
@@ -56,4 +41,11 @@ public class weapon_menu_pane extends JPanel implements MouseListener {
         weapon_pane.get_show_weapon_pane().setVisible(false);
         user_pane.get_show_user_pane().setVisible(true);
     }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {}
+    @Override
+    public void mousePressed(MouseEvent e) {}
+    @Override
+    public void mouseReleased(MouseEvent e) {}
 }

@@ -8,9 +8,9 @@ public class weapon_pane extends JPanel {
 
     public weapon_pane() {
         this.add(new JLabel("PROPERTIES"));
-        this.setBackground(new Color(26, 26, 26));
+        this.setBackground(new Color(33, 33, 33));
         this.setVisible(false);
-        this.setPreferredSize(new Dimension(580, 540));
+        this.setPreferredSize(new Dimension(550, 520));
     }
 
     public static weapon_pane create_weapon_pane() {

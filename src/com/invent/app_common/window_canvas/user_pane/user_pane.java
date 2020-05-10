@@ -7,9 +7,9 @@ public class user_pane extends JPanel {
     public static user_pane _user_pane;
     public user_pane() {
         this.add(new JLabel("USER"));
-        this.setBackground(new Color(26, 26, 26));
+        this.setBackground(new Color(33, 33, 33));
         this.setVisible(true);
-        this.setPreferredSize(new Dimension(580, 540));
+        this.setPreferredSize(new Dimension(550, 520));
     }
 
     public static user_pane create_user_pane() {

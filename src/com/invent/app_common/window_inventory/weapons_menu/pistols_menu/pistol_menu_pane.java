@@ -4,7 +4,6 @@ import com.invent.app_common.window_inventory.weapons_menu.weapon_menu_pane;
 
 import javax.swing.*;
 
-
 public class pistol_menu_pane extends weapon_menu_pane {
     private static pistol_menu_pane _pistol_menu_pane;
     public pistol_menu_pane() {
