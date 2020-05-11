@@ -16,6 +16,8 @@ public class smg_menu_pane extends weapon_menu_pane {
         this.panel_title = new JLabel("Smg's");
         panel_title.setForeground(this.panel_title_fore_ground_color);
         this.add(panel_title);
+
+        this.get_weapon_data();
     }
 
     public static smg_menu_pane create_smg_menu_pane() {

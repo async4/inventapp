@@ -12,11 +12,11 @@ public class rifle_menu_pane extends weapon_menu_pane {
     private static rifle_menu_pane _rifle_menu_pane;
     public rifle_menu_pane() {
         super();
-
         this.panel_title = new JLabel("Rifles");
         panel_title.setForeground(this.panel_title_fore_ground_color);
         this.add(panel_title);
 
+        this.get_weapon_data();
     }
 
     public static rifle_menu_pane create_rifle_menu_pane() {

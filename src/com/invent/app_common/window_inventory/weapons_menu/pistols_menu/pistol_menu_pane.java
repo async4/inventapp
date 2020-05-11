@@ -12,10 +12,11 @@ public class pistol_menu_pane extends weapon_menu_pane {
     private static pistol_menu_pane _pistol_menu_pane;
     public pistol_menu_pane() {
         super();
-
         this.panel_title = new JLabel("Pistols", SwingConstants.CENTER);
         panel_title.setForeground(this.panel_title_fore_ground_color);
         this.add(panel_title);
+
+        this.get_weapon_data();
     }
 
     public static pistol_menu_pane create_pistol_menu() {

@@ -16,7 +16,6 @@ public class weapon_menu_pane extends JPanel implements MouseListener {
         this.setBackground(new Color(33, 33, 33));
         this.setPreferredSize(new Dimension(250, 170));
         this.addMouseListener(this);
-        this.get_weapon_data();
     }
 
     public void get_weapon_data() {}
