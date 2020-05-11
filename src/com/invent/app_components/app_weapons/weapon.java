@@ -9,8 +9,10 @@ public class weapon {
     private int wait_after_shot;
     private int reload_time;
     private int fire_mode;
+    private String weapon_default_image;
+    private String weapon_hoverable_image;
 
-    public weapon(String category, String name, int[] magazine_capacity, int damage, int range_of_fire, int wait_after_shot, int reload_time, int fire_mode) {
+    public weapon(String category, String name, int[] magazine_capacity, int damage, int range_of_fire, int wait_after_shot, int reload_time, int fire_mode, String weapon_default_image, String weapon_hoverable_image) {
         this.category = category;
         this.name = name;
         this.magazine_capacity = magazine_capacity;
@@ -19,6 +21,8 @@ public class weapon {
         this.wait_after_shot = wait_after_shot;
         this.reload_time = reload_time;
         this.fire_mode = fire_mode;
+        this.weapon_default_image = weapon_default_image;
+        this.weapon_hoverable_image = weapon_hoverable_image;
     }
 
     public String getCategory() {
@@ -52,4 +56,13 @@ public class weapon {
     public int getFire_mode() {
         return fire_mode;
     }
+
+    public String getWeapon_default_image() {
+        return weapon_default_image;
+    }
+
+    public String getWeapon_hoverable_image() {
+        return weapon_hoverable_image;
+    }
+
 }

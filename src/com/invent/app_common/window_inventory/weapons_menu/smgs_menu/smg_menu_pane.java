@@ -1,6 +1,5 @@
 package com.invent.app_common.window_inventory.weapons_menu.smgs_menu;
 
-
 import com.invent.app_common.window_inventory.weapons_menu.weapon_menu_pane;
 
 import javax.swing.*;
@@ -28,7 +27,6 @@ public class smg_menu_pane extends weapon_menu_pane {
     }
 
     public void test() {
-        System.out.println("smg");
     }
 
 }

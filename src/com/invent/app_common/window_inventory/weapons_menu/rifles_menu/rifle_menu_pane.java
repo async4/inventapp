@@ -27,7 +27,7 @@ public class rifle_menu_pane extends weapon_menu_pane {
     }
 
     public void test() {
-        System.out.println("rifle");
+
     }
 
 }
