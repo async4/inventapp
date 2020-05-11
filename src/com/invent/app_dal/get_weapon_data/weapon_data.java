@@ -1,9 +1,6 @@
 package com.invent.app_dal.get_weapon_data;
 
 import com.invent.app_components.app_weapons.weapon;
-import com.invent.app_components.app_weapons.weapon_pistols.weapon_pistol;
-import com.invent.app_components.app_weapons.weapon_rifles.weapon_rifle;
-import com.invent.app_components.app_weapons.weapon_smgs.weapon_smg;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -27,6 +24,7 @@ public class weapon_data {
         try (connection;
              Statement statement  = connection.createStatement();
              ResultSet result_set    = statement.executeQuery(sql)){
+            write_weapons_data_from_db<String, weapon> weapon_object;
 
             while (result_set.next()) {
                 String category = result_set.getString("CATEGORY");
@@ -39,25 +37,18 @@ public class weapon_data {
                 int reload_time = result_set.getInt("RELOAD_TIME");
                 int fire_mode = result_set.getInt("FIRE_MODE");
 
+                weapon we = new weapon(category, name, new int[]{magazine_capacity, total_magazine_capacity}, damage, range_of_fire, wait_after_shot, reload_time, fire_mode, "null", "null");
+
                 if (category.compareTo("pistol") == 0) {
-                    weapon_data.pistols_data.add(
-                            new weapon_pistol(category, name, new int[]{magazine_capacity, total_magazine_capacity},
-                                    damage, range_of_fire, wait_after_shot,
-                                    reload_time, fire_mode, "null", "null"));
+                    weapon_object =  new write_weapons_data_from_db<String, weapon>("pistol", we);
                 }
 
                 if (category.compareTo("smg") == 0) {
-                    weapon_data.smgs_data.add(
-                            new weapon_smg(category, name, new int[]{magazine_capacity, total_magazine_capacity},
-                                           damage, range_of_fire, wait_after_shot,
-                                           reload_time, fire_mode, "null", "null"));
+                    weapon_object =  new write_weapons_data_from_db<String, weapon>("smg", we);
                 }
 
                 if (category.compareTo("rifle") == 0) {
-                    weapon_data.rifles_data.add(
-                            new weapon_rifle(category, name, new int[]{magazine_capacity, total_magazine_capacity},
-                                             damage, range_of_fire, wait_after_shot,
-                                             reload_time, fire_mode, "null", "null"));
+                    weapon_object = new write_weapons_data_from_db<String, weapon>("rifle", we);
                 }
             }
         } catch (SQLException e) {
@@ -75,5 +66,17 @@ public class weapon_data {
 
     public static ArrayList<weapon> getRifles_data() {
         return rifles_data;
+    }
+
+    public static void setPistols_data(weapon weapon_object) {
+        weapon_data.pistols_data.add(weapon_object);
+    }
+
+    public static void setSmgs_data(weapon weapon_object) {
+        weapon_data.smgs_data.add(weapon_object);
+    }
+
+    public static void setRifles_data(weapon weapon_object) {
+        weapon_data.rifles_data.add(weapon_object);
     }
 }

@@ -12,6 +12,10 @@ public class weapon {
     private String weapon_default_image;
     private String weapon_hoverable_image;
 
+    public weapon() {
+
+    }
+
     public weapon(String category, String name, int[] magazine_capacity, int damage, int range_of_fire, int wait_after_shot, int reload_time, int fire_mode, String weapon_default_image, String weapon_hoverable_image) {
         this.category = category;
         this.name = name;
