@@ -1,15 +1,12 @@
 package com.invent.app_common.window_inventory.weapons_menu;
 
-import com.invent.app_business.test;
 import com.invent.app_common.window_canvas.user_pane.user_pane;
 import com.invent.app_common.window_canvas.weapon_pane.weapon_pane;
-import com.invent.app_components.app_weapons.weapon;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.ArrayList;
 
 public class weapon_menu_pane extends JPanel implements MouseListener {
     protected JLabel panel_title;

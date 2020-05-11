@@ -1,6 +1,6 @@
 package com.invent.app_common.window_inventory.weapons_menu.pistols_menu;
 
-import com.invent.app_business.test;
+import com.invent.app_dal.get_weapon_data.weapon_data;
 import com.invent.app_common.window_inventory.weapons_menu.weapon_menu_pane;
 import com.invent.app_components.app_weapons.weapon;
 
@@ -34,8 +34,11 @@ public class pistol_menu_pane extends weapon_menu_pane {
     public void test() {
         // menulerein icerisine farkli bir panel eklenir daha sonra o panele label lar yerlestirilir.
         // yeni bir panel sinifi olustur. labellari oraya eklemek icin farkli bir fonksiyon olustur.
-        test.set_pistols();
-        ArrayList<weapon> pistols = test.get_pistols();
+        ArrayList<weapon> pistols = weapon_data.getPistols_data();
+        for (int i = 0; i < pistols.size(); i++) {
+            System.out.println(pistols.get(i));
+        }
+
         JPanel pn = new JPanel();
         pn.setPreferredSize(new Dimension(250, 140));
         pn.setBackground(new Color(0.1f, 0.1f, 0.1f, 0.1f));
