@@ -5,7 +5,6 @@ import com.invent.app_common.window_inventory.weapons_menu.weapon_menu_pane;
 import com.invent.app_components.app_weapons.weapon;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 
 
@@ -17,7 +16,6 @@ public class pistol_menu_pane extends weapon_menu_pane {
         this.panel_title = new JLabel("Pistols", SwingConstants.CENTER);
         panel_title.setForeground(this.panel_title_fore_ground_color);
         this.add(panel_title);
-        test();
     }
 
     public static pistol_menu_pane create_pistol_menu() {
@@ -31,27 +29,12 @@ public class pistol_menu_pane extends weapon_menu_pane {
         return _pistol_menu_pane;
     }
 
-    public void test() {
+    @Override
+    public void get_weapon_data() {
         // menulerein icerisine farkli bir panel eklenir daha sonra o panele label lar yerlestirilir.
         // yeni bir panel sinifi olustur. labellari oraya eklemek icin farkli bir fonksiyon olustur.
         ArrayList<weapon> pistols = weapon_data.getPistols_data();
-        for (int i = 0; i < pistols.size(); i++) {
-            System.out.println(pistols.get(i));
-        }
-
-        JPanel pn = new JPanel();
-        pn.setPreferredSize(new Dimension(250, 140));
-        pn.setBackground(new Color(0.1f, 0.1f, 0.1f, 0.1f));
-        this.add(pn);
-
-        pn.setLayout(new GridLayout(0, 2));
-        for (int i = 0; i < pistols.size(); i++) {
-            JLabel label = new JLabel(pistols.get(i).getName());
-            label.setForeground(Color.white);
-            label.setHorizontalAlignment(SwingConstants.CENTER);
-            label.setVerticalAlignment(SwingConstants.CENTER);
-            pn.add(label);
-        }
+        set_weapon_data(pistols);
     }
 
 }

@@ -24,9 +24,8 @@ public class weapon_data {
         try (connection;
              Statement statement  = connection.createStatement();
              ResultSet result_set    = statement.executeQuery(sql)){
-            write_weapons_data_from_db<String, weapon> weapon_object;
-
             while (result_set.next()) {
+
                 String category = result_set.getString("CATEGORY");
                 String name = result_set.getString("NAME");
                 int magazine_capacity = result_set.getInt("MAGAZINE_CAPACITY");
@@ -36,21 +35,28 @@ public class weapon_data {
                 int wait_after_shot = result_set.getInt("WAIT_AFTER_SHOT");
                 int reload_time = result_set.getInt("RELOAD_TIME");
                 int fire_mode = result_set.getInt("FIRE_MODE");
+                String weapon_image = result_set.getString("WEAPON_IMAGE");
 
-                weapon we = new weapon(category, name, new int[]{magazine_capacity, total_magazine_capacity}, damage, range_of_fire, wait_after_shot, reload_time, fire_mode, "null", "null");
+                weapon weapon = new weapon(category, name, new int[]{magazine_capacity, total_magazine_capacity}, damage, range_of_fire, wait_after_shot, reload_time, fire_mode, weapon_image, "null");
+                write_weapons_data_from_db<String, weapon> weapon_object;
 
                 if (category.compareTo("pistol") == 0) {
-                    weapon_object =  new write_weapons_data_from_db<String, weapon>("pistol", we);
+                    weapon_object =  new write_weapons_data_from_db<String, weapon>("pistol", weapon);
                 }
 
                 if (category.compareTo("smg") == 0) {
-                    weapon_object =  new write_weapons_data_from_db<String, weapon>("smg", we);
+                    weapon_object =  new write_weapons_data_from_db<String, weapon>("smg", weapon);
                 }
 
                 if (category.compareTo("rifle") == 0) {
-                    weapon_object = new write_weapons_data_from_db<String, weapon>("rifle", we);
+                    weapon_object = new write_weapons_data_from_db<String, weapon>("rifle", weapon);
                 }
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

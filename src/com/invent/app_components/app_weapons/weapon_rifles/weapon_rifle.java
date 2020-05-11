@@ -12,16 +12,13 @@ public class weapon_rifle extends weapon implements IWeapon_Action {
 
     @Override
     public void fire() {
-
     }
 
     @Override
     public void reloading() {
-
     }
 
     @Override
     public void waiting_after_shot() {
-
     }
 }

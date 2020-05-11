@@ -38,17 +38,5 @@ public class app_content_pane extends JSplitPane {
         // Ortada cikacak olan ayracin konumu. 300 WIDTH.
         // Yani sol panel 300 WIDTH uzunlugunda. Sag panel ise 600 WIDTH uzunlugunda olacktir.
         this.setDividerLocation(300);
-
-
     }
-
-    /*
-    public static void print(weapon w) {
-        // testing
-        int[] deagle_mcap = {0, 1};
-        weapon_pistol deagle = new weapon_pistol("pistol", "deagle", deagle_mcap, 250, 50, 1, 3, 0);
-        System.out.println("category: " + w.getCategory() + "\nname: " + w.getName() + "\nammo: " + w.getMagazine_capacity()[0] + "/" + w.getMagazine_capacity()[1] + "\ndamage: " + w.getDamage() + "\nrange: " + w.getRange_of_fire() + "\nwas: " + w.getWait_after_shot() + "\nreloaded time: " + w.getReload_time() + "\nfire mode: " + w.getFire_mode());
-    }
-
-     */
 }
