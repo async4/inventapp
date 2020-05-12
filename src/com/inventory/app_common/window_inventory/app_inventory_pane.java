@@ -13,7 +13,10 @@ public class app_inventory_pane extends JPanel {
 
     public app_inventory_pane(){
         this.setBackground(inventory_pane_background_color);
-        this.add(new JLabel("PICK WEAPONS TAB"));
+
+        JLabel title = new JLabel("PICK WEAPONS");
+        title.setForeground(new Color(166, 166, 166));
+        this.add(title);
         this.add(pistol_menu_pane.create_pistol_menu());
         this.add(smg_menu_pane.create_smg_menu_pane());
         this.add(rifle_menu_pane.create_rifle_menu_pane());

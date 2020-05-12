@@ -15,7 +15,9 @@ public class app_canvas_pane extends JPanel {
 
     public app_canvas_pane(){
         this.setBackground(canvas_pane_background_color);
-        this.add(new JLabel("SHOW INVENTORY AND WEAPON PROPERTIES"));
+        JLabel title = new JLabel("INVENTORY AND WEAPON PROPERTIES");
+        title.setForeground(new Color(166, 166, 166));
+        this.add(title);
         this.add(user_pane.create_user_pane());
         this.add(weapon_properties_pane.create_weapon_pane());
     }
