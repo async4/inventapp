@@ -20,6 +20,8 @@ public class weapon_label extends JLabel implements MouseListener {
     private static final Color default_label_color = new Color(255, 255, 255);
     private static final Color hoverable_label_color = new Color(237, 52, 66);
 
+    private static Boolean choice_weapon_status = false;
+
     public weapon_label(weapon weapon_data) {
         this.weapon_data = weapon_data;
 
@@ -38,8 +40,11 @@ public class weapon_label extends JLabel implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        // Mouse ile label in uzerine gelindiginde label in rengi degisir.
-        this.setForeground(hoverable_label_color);
+        if (weapon_data.getWeapon_choice_status() == 0) {
+            // Mouse ile label in uzerine gelindiginde label in rengi degisir.
+            this.setText("");
+            this.setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_default_ico())));
+        }
 
         // weapon properties ekranina uzerine gelinen weapon in ozellikleri eklenir.
         weapon_properties.getMagazine_capacity_label().setText(String.valueOf(weapon_data.getMagazine_capacity()[0]) + "/" +
@@ -69,8 +74,10 @@ public class weapon_label extends JLabel implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent e) {
-        // Label rengi eski haline getirilir.
-        this.setForeground(default_label_color);
+        if (weapon_data.getWeapon_choice_status() == 0) {
+            this.setIcon(new ImageIcon(this.getClass().getResource("")));
+            this.setText(weapon_data.getName());
+        }
 
         // Properties paneli gizlenir.
         weapon_properties_pane.getWeapon_prop_pane().setVisible(false);
@@ -81,6 +88,8 @@ public class weapon_label extends JLabel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        weapon_data.setWeapon_choice_status();
+        this.setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_hoverable_ico())));
     }
 
     @Override

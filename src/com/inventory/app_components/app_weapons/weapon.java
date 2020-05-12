@@ -2,19 +2,21 @@ package com.inventory.app_components.app_weapons;
 
 
 public class weapon {
-    private String name;
-    private String category;
-    private int[] magazine_capacity;
-    private int damage;
-    private int range_of_fire;
-    private int wait_after_shot;
-    private int reload_time;
-    private int fire_mode;
-    private String weapon_default_image;
-    private String weapon_hoverable_image;
+    private final String name;
+    private final String category;
+    private final int[] magazine_capacity;
+    private final int damage;
+    private final int range_of_fire;
+    private final int wait_after_shot;
+    private final int reload_time;
+    private final int fire_mode;
+    private final String weapon_default_image;
+    private final String weapon_default_ico;
+    private final String weapon_hoverable_ico;
+    private int weapon_choice_status;
 
 
-    public weapon(String category, String name, int[] magazine_capacity, int damage, int range_of_fire, int wait_after_shot, int reload_time, int fire_mode, String weapon_default_image, String weapon_hoverable_image) {
+    public weapon(String category, String name, int[] magazine_capacity, int damage, int range_of_fire, int wait_after_shot, int reload_time, int fire_mode, String weapon_default_image, String weapon_default_ico, String weapon_hoverable_ico, int weapon_choice_status) {
         this.category = category;
         this.name = name;
         this.magazine_capacity = magazine_capacity;
@@ -24,7 +26,9 @@ public class weapon {
         this.reload_time = reload_time;
         this.fire_mode = fire_mode;
         this.weapon_default_image = weapon_default_image;
-        this.weapon_hoverable_image = weapon_hoverable_image;
+        this.weapon_default_ico = weapon_default_ico;
+        this.weapon_hoverable_ico = weapon_hoverable_ico;
+        this.weapon_choice_status = weapon_choice_status;
     }
 
     public String getCategory() {
@@ -63,7 +67,23 @@ public class weapon {
         return weapon_default_image;
     }
 
-    public String getWeapon_hoverable_image() {
-        return weapon_hoverable_image;
+    public String getWeapon_default_ico() {
+        return weapon_default_ico;
+    }
+
+    public String getWeapon_hoverable_ico() {
+        return weapon_hoverable_ico;
+    }
+
+    public int getWeapon_choice_status() {
+        return weapon_choice_status;
+    }
+
+    public void setWeapon_choice_status() {
+        if (this.weapon_choice_status == 0) {
+            this.weapon_choice_status = 1;
+        } else {
+            this.weapon_choice_status = 0;
+        }
     }
 }
