@@ -49,12 +49,11 @@ public class weapon_data {
                         String weapon_image = result_set.getString("WEAPON_IMAGE");
                         String weapon_default_ico = result_set.getString("WEAPON_DEFAULT_ICO");
                         String weapon_hoverable_ico = result_set.getString("WEAPON_HOVERABLE_ICO");
-                        int weapon_choice_status = result_set.getInt("WEAPON_CHOICE_STATUS");
 
                         // Yeni bir weapon sinifindan nesne uretilir ve elimizde bir adet weapon nesnesi olusur.
                         weapon weapon = new weapon(category, name, new int[]{magazine_capacity, total_magazine_capacity},
                                                    damage, range_of_fire, wait_after_shot, reload_time,
-                                                   fire_mode, weapon_image, weapon_default_ico, weapon_hoverable_ico, weapon_choice_status);
+                                                   fire_mode, weapon_image, weapon_default_ico, weapon_hoverable_ico);
 
                         // Olusan weaponin suanlık icin hangi veriye aktaracagimizi bilemiyoruz.
                         // Bunun icin veriyi bellege yazmadan once tipini sorgulamamiz gerekiyor.

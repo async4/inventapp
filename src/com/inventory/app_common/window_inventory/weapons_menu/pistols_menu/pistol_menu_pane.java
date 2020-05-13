@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class pistol_menu_pane extends weapon_menu_pane {
     private static pistol_menu_pane _pistol_menu_pane;
+
     public pistol_menu_pane() {
         super();
 

@@ -9,7 +9,7 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 
-public class weapon_menu_pane extends JPanel implements MouseListener {
+public abstract class weapon_menu_pane extends JPanel implements MouseListener {
     protected JLabel panel_title;
     protected Color panel_title_fore_ground_color = new Color(185, 185, 185);
 

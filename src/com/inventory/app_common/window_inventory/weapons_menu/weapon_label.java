@@ -20,7 +20,6 @@ public class weapon_label extends JLabel implements MouseListener {
     private static final Color default_label_color = new Color(255, 255, 255);
     private static final Color hoverable_label_color = new Color(237, 52, 66);
 
-    private static Boolean choice_weapon_status = false;
 
     public weapon_label(weapon weapon_data) {
         this.weapon_data = weapon_data;
@@ -40,7 +39,7 @@ public class weapon_label extends JLabel implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if (weapon_data.getWeapon_choice_status() == 0) {
+        if (weapon_data.getWeapon_choice_status() == false) {
             // Mouse ile label in uzerine gelindiginde label in rengi degisir.
             this.setText("");
             this.setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_default_ico())));
@@ -74,7 +73,7 @@ public class weapon_label extends JLabel implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent e) {
-        if (weapon_data.getWeapon_choice_status() == 0) {
+        if (weapon_data.getWeapon_choice_status() == false) {
             this.setIcon(new ImageIcon(this.getClass().getResource("")));
             this.setText(weapon_data.getName());
         }
@@ -88,12 +87,13 @@ public class weapon_label extends JLabel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        weapon_data.setWeapon_choice_status();
+        weapon_data.setWeapon_choice_status(true);
         this.setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_hoverable_ico())));
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
+
     }
 
     @Override

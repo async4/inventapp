@@ -13,10 +13,9 @@ public class weapon {
     private final String weapon_default_image;
     private final String weapon_default_ico;
     private final String weapon_hoverable_ico;
-    private int weapon_choice_status;
+    private boolean weapon_choice_status;
 
-
-    public weapon(String category, String name, int[] magazine_capacity, int damage, int range_of_fire, int wait_after_shot, int reload_time, int fire_mode, String weapon_default_image, String weapon_default_ico, String weapon_hoverable_ico, int weapon_choice_status) {
+    public weapon(String category, String name, int[] magazine_capacity, int damage, int range_of_fire, int wait_after_shot, int reload_time, int fire_mode, String weapon_default_image, String weapon_default_ico, String weapon_hoverable_ico) {
         this.category = category;
         this.name = name;
         this.magazine_capacity = magazine_capacity;
@@ -28,7 +27,7 @@ public class weapon {
         this.weapon_default_image = weapon_default_image;
         this.weapon_default_ico = weapon_default_ico;
         this.weapon_hoverable_ico = weapon_hoverable_ico;
-        this.weapon_choice_status = weapon_choice_status;
+        this.weapon_choice_status = false;
     }
 
     public String getCategory() {
@@ -75,15 +74,15 @@ public class weapon {
         return weapon_hoverable_ico;
     }
 
-    public int getWeapon_choice_status() {
-        return weapon_choice_status;
+    public boolean getWeapon_choice_status() {
+        return this.weapon_choice_status;
     }
 
-    public void setWeapon_choice_status() {
-        if (this.weapon_choice_status == 0) {
-            this.weapon_choice_status = 1;
+    public void setWeapon_choice_status(boolean status) {
+        if (this.weapon_choice_status == status) {
+            this.weapon_choice_status = !status;
         } else {
-            this.weapon_choice_status = 0;
+            this.weapon_choice_status = status;
         }
     }
 }
