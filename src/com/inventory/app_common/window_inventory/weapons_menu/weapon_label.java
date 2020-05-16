@@ -1,5 +1,8 @@
 package com.inventory.app_common.window_inventory.weapons_menu;
 
+import com.inventory.app_common.window_canvas.user_pane.selected_weapon_pane.selected_pane.selected_pistol_pane;
+import com.inventory.app_common.window_canvas.user_pane.selected_weapon_pane.selected_pane.selected_rifle_pane;
+import com.inventory.app_common.window_canvas.user_pane.selected_weapon_pane.selected_pane.selected_smg_pane;
 import com.inventory.app_common.window_canvas.user_pane.user_pane;
 import com.inventory.app_common.window_canvas.weapon_properties_pane.weapon_image;
 import com.inventory.app_common.window_canvas.weapon_properties_pane.weapon_properties;
@@ -105,11 +108,36 @@ public class weapon_label extends JLabel implements MouseListener {
 
         if (weapon_data.getWeapon_choice_status() && before_weapon_data.getWeapon_choice_status()) {
             weapon_data.setWeapon_choice_status(false);
+
+            if (weapon_data.getCategory().compareTo("pistol") == 0) {
+                selected_pistol_pane.setPistol_label("empty", null);
+            }
+
+            if (weapon_data.getCategory().compareTo("smg") == 0) {
+                selected_smg_pane.setSmg_label("empty", null);
+            }
+
+            if (weapon_data.getCategory().compareTo("rifle") == 0) {
+                selected_rifle_pane.setRifle_label("empty", null);
+            }
+
         } else {
             change_label_ico("", weapon_data.getWeapon_hoverable_ico());
             remove_before_label(before_weapon_data, before_label);
 
             weapon_data.setWeapon_choice_status(true);
+
+            if (weapon_data.getCategory().compareTo("pistol") == 0) {
+                selected_pistol_pane.setPistol_label(weapon_data.getName(), weapon_data);
+            }
+
+            if (weapon_data.getCategory().compareTo("smg") == 0) {
+                selected_smg_pane.setSmg_label(weapon_data.getName(), weapon_data);
+            }
+
+            if (weapon_data.getCategory().compareTo("rifle") == 0) {
+                selected_rifle_pane.setRifle_label(weapon_data.getName(), weapon_data);
+            }
 
             pick_pane.setBefore_weapon_data(weapon_data);
             pick_pane.setBefore_label(this);
