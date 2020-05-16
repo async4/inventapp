@@ -38,7 +38,7 @@ public abstract class weapon_menu_pane extends JPanel implements MouseListener {
 
         for (var item: weapon_data
              ) {
-            weapon_label.create_weapon_label(item);
+            weapon_label.create_weapon_label(item, pick_pane);
             weapon_label label = weapon_label.get_weapon_label();
             label.setForeground(LABEL_FORE_COLOR);
             label.setHorizontalAlignment(SwingConstants.CENTER);

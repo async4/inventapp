@@ -97,10 +97,6 @@ public class weapon {
 
 
     public void setWeapon_choice_status(boolean status) {
-        if (this.weapon_choice_status == status) {
-            this.weapon_choice_status = !status;
-        } else {
-            this.weapon_choice_status = status;
-        }
+        this.weapon_choice_status = status;
     }
 }
