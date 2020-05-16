@@ -36,8 +36,4 @@ public class app_canvas_pane extends JPanel {
         return canvas_pane;
     }
 
-    public void update_canvas_pane() {
-        this.validate();
-        this.repaint();
-    }
 }

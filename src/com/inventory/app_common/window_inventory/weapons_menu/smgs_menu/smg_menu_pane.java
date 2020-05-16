@@ -1,6 +1,6 @@
 package com.inventory.app_common.window_inventory.weapons_menu.smgs_menu;
 
-import com.inventory.app_dal.get_weapon_data.weapon_data;
+import com.inventory.app_dal.get_weapon_data.weapon_properties_data;
 import com.inventory.app_common.window_inventory.weapons_menu.weapon_menu_pane;
 import com.inventory.app_components.app_weapons.weapon;
 
@@ -15,11 +15,12 @@ public class smg_menu_pane extends weapon_menu_pane {
         super();
 
         this.panel_title = new JLabel("Smg's");
-        panel_title.setForeground(this.panel_title_fore_ground_color);
+        panel_title.setForeground(this.PANEL_TITLE_FORE_COLOR);
         this.add(panel_title);
 
         this.get_weapon_data();
     }
+
 
     public static smg_menu_pane create_smg_menu_pane() {
         if (_smg_menu_pane == null) {
@@ -28,13 +29,15 @@ public class smg_menu_pane extends weapon_menu_pane {
         return _smg_menu_pane;
     }
 
+
     public static smg_menu_pane get_smg_menu_pane() {
         return _smg_menu_pane;
     }
 
+
     @Override
     public void get_weapon_data() {
-        ArrayList<weapon> smgs = weapon_data.getSmgs_data();
+        ArrayList<weapon> smgs = weapon_properties_data.getSmgs_data();
         set_weapon_data(smgs);
     }
 }

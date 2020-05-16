@@ -7,7 +7,6 @@ import com.inventory.app_common.window_canvas.weapon_properties_pane.weapon_prop
 import com.inventory.app_components.app_weapons.weapon;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -16,9 +15,6 @@ public class weapon_label extends JLabel implements MouseListener {
     private static weapon_label _weapon_label;
 
     private weapon weapon_data;
-
-    private static final Color default_label_color = new Color(255, 255, 255);
-    private static final Color hoverable_label_color = new Color(237, 52, 66);
 
 
     public weapon_label(weapon weapon_data) {
@@ -29,72 +25,129 @@ public class weapon_label extends JLabel implements MouseListener {
         this.addMouseListener(this);
     }
 
+
     public static void create_weapon_label(weapon weapon_data) {
         _weapon_label = new weapon_label(weapon_data);
     }
+
 
     public static weapon_label get_weapon_label() {
         return _weapon_label;
     }
 
-    @Override
-    public void mouseEntered(MouseEvent e) {
+
+    private void change_label_ico(String text, String ico_path) {
         if (weapon_data.getWeapon_choice_status() == false) {
-            // Mouse ile label in uzerine gelindiginde label in rengi degisir.
-            this.setText("");
-            this.setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_default_ico())));
+            this.setText(text);
+            this.setIcon(new ImageIcon(this.getClass().getResource(ico_path)));
         }
+    }
 
-        // weapon properties ekranina uzerine gelinen weapon in ozellikleri eklenir.
-        weapon_properties.getMagazine_capacity_label().setText(String.valueOf(weapon_data.getMagazine_capacity()[0]) + "/" +
-                                                               String.valueOf(weapon_data.getMagazine_capacity()[1]));
-        weapon_properties.getDamage_label().setText(String.valueOf(weapon_data.getDamage()));
-        weapon_properties.getRange_of_fire().setText(String.valueOf(weapon_data.getRange_of_fire()));
-        weapon_properties.getReload_time().setText(String.valueOf(weapon_data.getReload_time()) + " sec");
 
-        if (String.valueOf(weapon_data.getFire_mode()).compareTo("0") == 0) {
+    // weapon properties ekraninda uzerine gelinen weapon label in ozellikleri eklenir.
+    private void add_weapon_properties_to_pane() {
+        weapon_properties.getMagazine_capacity_label()
+                .setText(
+                    weapon_data.getMagazine_capacity()[0] + "/" +
+                    weapon_data.getMagazine_capacity()[1]
+                );
+
+        // weapon in damage verisi eklenir.
+        weapon_properties.getDamage_label()
+                .setText(String.valueOf(weapon_data.getDamage()));
+
+        // weapon in range of fire verisi eklenir.
+        weapon_properties.getRange_of_fire()
+                .setText(String.valueOf(weapon_data.getRange_of_fire()));
+
+        // weapon in reload time verisi eklenir.
+        weapon_properties.getReload_time()
+                .setText(weapon_data.getReload_time() + " sec");
+
+        // weapon in fire mode verisi eklenir.
+        if (weapon_data.getFire_mode() == 0) {
+            // 0 ise yari otamatik
             weapon_properties.getFire_mode().setText("s-auto");
         } else {
+            // 0 dan farkli ise otomatik
             weapon_properties.getFire_mode().setText("auto");
         }
+    }
 
-        // weapon properties paneli ekranda gozukur.
-        weapon_properties_pane.getWeapon_prop_pane().setVisible(true);
 
+    private void add_weapon_image_to_pane() {
         // Uzerine gelinen weapon in resmi ekranda gosterilir.
-        weapon_image.get_weapon_image_label().setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_default_image())));
+        weapon_image.get_weapon_image_label()
+                .setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_default_image())));
 
         // Uzerine gelinen weapon in ismi ekranda gosterilir.
-        weapon_image.get_weapon_name_label().setText(weapon_data.getName());
-
-        // User paneli gizlenir.
-        user_pane.get_show_user_pane().setVisible(false);
+        weapon_image.get_weapon_name_label()
+                .setText(weapon_data.getName());
     }
+
+
+    private void change_user_pane_visible_status(boolean status) {
+        user_pane.get_user_pane().setVisible(status);
+    }
+
+
+    private void change_prop_pane_visible_status(boolean status) {
+        weapon_properties_pane.get_weapon_prop_pane().setVisible(status);
+    }
+
+
+    private void choice_weapon() {
+        if (weapon_data.getWeapon_choice_status()) {
+            weapon_data.setWeapon_choice_status(false);
+
+        } else {
+            change_label_ico("", weapon_data.getWeapon_hoverable_ico());
+            weapon_data.setWeapon_choice_status(true);
+        }
+    }
+
 
     @Override
-    public void mouseExited(MouseEvent e) {
-        if (weapon_data.getWeapon_choice_status() == false) {
-            this.setIcon(new ImageIcon(this.getClass().getResource("")));
-            this.setText(weapon_data.getName());
-        }
+    public void mouseEntered(MouseEvent e) {
+        // weapon label in in uzerine gelindiginde weapon a ait olan icon text yerine eklenir.
+        change_label_ico("", weapon_data.getWeapon_default_ico());
 
-        // Properties paneli gizlenir.
-        weapon_properties_pane.getWeapon_prop_pane().setVisible(false);
+        // weapon in ozellikleri panele eklenir.
+        add_weapon_properties_to_pane();
 
-        // User paneli gosterilir.
-        user_pane.get_show_user_pane().setVisible(true);
+        // weapon image
+        add_weapon_image_to_pane();
+
+        // User paneli gizlenir.
+        change_user_pane_visible_status(false);
+
+        // weapon properties paneli ekranda gozukur.
+        change_prop_pane_visible_status(true);
     }
+
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        weapon_data.setWeapon_choice_status(true);
-        this.setIcon(new ImageIcon(this.getClass().getResource(weapon_data.getWeapon_hoverable_ico())));
+        choice_weapon();
     }
+
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        change_label_ico(weapon_data.getName(), "");
+
+        // Properties paneli gizlenir.
+        change_prop_pane_visible_status(false);
+
+        // User paneli gosterilir.
+        change_user_pane_visible_status(true);
+    }
+
 
     @Override
     public void mousePressed(MouseEvent e) {
-
     }
+
 
     @Override
     public void mouseReleased(MouseEvent e) {

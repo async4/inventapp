@@ -5,16 +5,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class connect_weapons_db {
-    public static Connection connect() {
+public abstract class connect_db {
+    private final static String JDBC_DRIVER_PATH = "jdbc:sqlite:res/db/";
+
+    public static Connection connect(String database_name) {
         Connection connection = null;
 
         // Veritabanimizin bulundugu path (jdbc driveri gereklidir. -> https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
-        String weapons_db_path = "jdbc:sqlite:res/weapon_data/weapons_properties";
+        final String FULL_PATH = JDBC_DRIVER_PATH + database_name;
 
         try {
             // Veritabanina baglanilir.
-            connection = DriverManager.getConnection(weapons_db_path);
+            connection = DriverManager.getConnection(FULL_PATH);
         } catch (SQLException e) {
             // Baglantida sorun cikarsa hata mesaji gosterilir.
             System.out.println(e.getMessage());

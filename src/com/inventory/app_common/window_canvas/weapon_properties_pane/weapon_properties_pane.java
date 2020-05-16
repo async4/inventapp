@@ -8,10 +8,11 @@ public class weapon_properties_pane extends JPanel {
 
     public weapon_properties_pane() {
         this.setBackground(new Color(33, 33, 33));
-        this.setVisible(false);
         this.setPreferredSize(new Dimension(550, 520));
         this.add(new weapon_image());
         this.add(new weapon_properties());
+
+        this.setVisible(false);
     }
 
     public static weapon_properties_pane create_weapon_pane() {
@@ -21,7 +22,7 @@ public class weapon_properties_pane extends JPanel {
         return _weapon_prop_pane;
     }
 
-    public static weapon_properties_pane getWeapon_prop_pane() {
+    public static weapon_properties_pane get_weapon_prop_pane() {
         return _weapon_prop_pane;
     }
 
