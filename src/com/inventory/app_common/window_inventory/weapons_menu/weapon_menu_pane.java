@@ -11,12 +11,20 @@ import java.util.ArrayList;
 
 public abstract class weapon_menu_pane extends JPanel implements MouseListener {
     protected JLabel panel_title;
+
     protected final Color PANEL_TITLE_FORE_COLOR = new Color(185, 185, 185);
+
+    private final Color PANE_COLOR = new Color(33, 33, 33);
+    private final Dimension PANE_SIZE = new Dimension(250, 170);
+    private final Color PANE_BORDER_COLOR = new Color(240, 240, 240);
+    private final Color PANE_FORE_COLOR = new Color(234, 234, 234);
+
+    private final Color LABEL_FORE_COLOR = new Color(236, 236, 236);
 
 
     public weapon_menu_pane() {
-        this.setBackground(new Color(33, 33, 33));
-        this.setPreferredSize(new Dimension(250, 170));
+        this.setBackground(PANE_COLOR);
+        this.setPreferredSize(PANE_SIZE);
         this.addMouseListener(this);
     }
 
@@ -32,7 +40,7 @@ public abstract class weapon_menu_pane extends JPanel implements MouseListener {
              ) {
             weapon_label.create_weapon_label(item);
             weapon_label label = weapon_label.get_weapon_label();
-            label.setForeground(Color.white);
+            label.setForeground(LABEL_FORE_COLOR);
             label.setHorizontalAlignment(SwingConstants.CENTER);
             label.setVerticalAlignment(SwingConstants.CENTER);
             pick_pane.add(label);
@@ -43,15 +51,13 @@ public abstract class weapon_menu_pane extends JPanel implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        this.setBorder(BorderFactory.createLineBorder(Color.white, 1));
-        panel_title.setForeground(new Color(255, 255, 255));
+        this.setBorder(BorderFactory.createLineBorder(PANE_BORDER_COLOR, 1));
     }
 
 
     @Override
     public void mouseExited(MouseEvent e) {
-        this.setBorder(BorderFactory.createLineBorder(Color.white, 0, true));
-        panel_title.setForeground(PANEL_TITLE_FORE_COLOR);
+        this.setBorder(BorderFactory.createLineBorder(PANE_BORDER_COLOR, 0));
     }
 
 
