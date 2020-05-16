@@ -1,6 +1,5 @@
 # inventapp
 
-![IMG](https://i.hizliresim.com/aTXY56.png)
 
 ![IMG](https://i.hizliresim.com/WuMufr.png)
 
