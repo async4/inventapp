@@ -3,7 +3,7 @@ package com.inventory.app_common.window_canvas.user_pane.selected_weapon_pane.se
 import javax.swing.*;
 import java.awt.*;
 
-public class selected_pane extends JPanel {
+public abstract class selected_pane extends JPanel {
 
     public selected_pane() {
         this.setPreferredSize(new Dimension(250, 145));

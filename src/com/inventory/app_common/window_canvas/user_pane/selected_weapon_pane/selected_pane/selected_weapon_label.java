@@ -9,8 +9,7 @@ public class selected_weapon_label extends JLabel {
 
     public selected_weapon_label() {
         this.setPreferredSize(new Dimension(240, 130));
-        this.setBorder(BorderFactory.createLineBorder(Color.pink, 1));
-        this.setForeground(Color.white);
+        this.setForeground(new Color(170, 170, 170));
         this.setVerticalAlignment(SwingConstants.CENTER);
         this.setHorizontalAlignment(SwingConstants.CENTER);
         this.setText("empty");
