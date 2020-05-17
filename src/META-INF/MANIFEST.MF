@@ -1,3 +1,4 @@
 Manifest-Version: 1.0
 Main-Class: com.inventory.Main
+Class-Path: sqlite-jdbc-3.27.2.1.jar
 
