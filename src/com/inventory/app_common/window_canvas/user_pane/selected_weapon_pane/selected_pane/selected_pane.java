@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class selected_pane extends JPanel {
-
     public selected_pane() {
         this.setPreferredSize(new Dimension(250, 145));
         this.setBackground(new Color(26, 26, 26));

@@ -30,7 +30,11 @@ public class start_button extends JLabel implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         if (selected_pistol_pane.getSelected_weapon_data() != null && selected_smg_pane.getSelected_weapon_data() != null && selected_rifle_pane.getSelected_weapon_data() != null) {
-            game_data.create_soldier(selected_pistol_pane.getSelected_weapon_data(), selected_smg_pane.getSelected_weapon_data(), selected_rifle_pane.getSelected_weapon_data());
+            game_data.set_game_data(
+                    selected_pistol_pane.getSelected_weapon_data(),
+                    selected_smg_pane.getSelected_weapon_data(),
+                    selected_rifle_pane.getSelected_weapon_data()
+            );
             game_window.create_game_window();
         }
     }

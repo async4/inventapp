@@ -7,9 +7,8 @@ public class game_ui extends JPanel {
 
     public game_ui() {
         this.setBorder(BorderFactory.createLineBorder(Color.pink, 1));
-        this.setBackground(new Color(0, 0, 0, 55));
-        //this.setBackground(Color.black);
+        // this.setBackground(new Color(0, 0, 0, 55));
+        this.setBackground(Color.black);
 
-        this.add(new JLabel("test"));
     }
 }
