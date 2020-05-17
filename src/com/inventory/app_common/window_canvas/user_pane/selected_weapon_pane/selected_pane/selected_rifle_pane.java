@@ -1,7 +1,7 @@
 package com.inventory.app_common.window_canvas.user_pane.selected_weapon_pane.selected_pane;
 
 import com.inventory.app_components.app_weapons.weapon;
-
+/* OPTIMIZE EDILECEK */
 public class selected_rifle_pane extends selected_pane {
     private static selected_weapon_label rifle_label;
     private static weapon selected_weapon_data;

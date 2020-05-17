@@ -109,7 +109,7 @@ public class weapon_label extends JLabel implements MouseListener {
         if (weapon_data.getWeapon_choice_status() && before_weapon_data.getWeapon_choice_status()) {
             weapon_data.setWeapon_choice_status(false);
 
-            // düzeltilecek
+            /* OPTIMIZE EDILECEK */
             if (weapon_data.getCategory().compareTo("pistol") == 0) {
                 selected_pistol_pane.setPistol_label("empty", null);
             }
@@ -128,7 +128,7 @@ public class weapon_label extends JLabel implements MouseListener {
 
             weapon_data.setWeapon_choice_status(true);
 
-            // düzeltilecek
+            /* OPTIMIZE EDILECEK */
             if (weapon_data.getCategory().compareTo("pistol") == 0) {
                 selected_pistol_pane.setPistol_label(weapon_data.getName(), weapon_data);
             }
