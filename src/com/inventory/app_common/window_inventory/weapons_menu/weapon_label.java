@@ -109,18 +109,17 @@ public class weapon_label extends JLabel implements MouseListener {
         if (weapon_data.getWeapon_choice_status() && before_weapon_data.getWeapon_choice_status()) {
             weapon_data.setWeapon_choice_status(false);
 
-            /* OPTIMIZE EDILECEK */
+            /* ///////////////////////////////////////////////// OPTIMIZE EDILECEK */
             if (weapon_data.getCategory().compareTo("pistol") == 0) {
                 selected_pistol_pane.setPistol_label("empty", null);
             }
-
             if (weapon_data.getCategory().compareTo("smg") == 0) {
                 selected_smg_pane.setSmg_label("empty", null);
             }
-
             if (weapon_data.getCategory().compareTo("rifle") == 0) {
                 selected_rifle_pane.setRifle_label("empty", null);
             }
+            /* ///////////////////////////////////////////////// OPTIMIZE EDILECEK */
 
         } else {
             change_label_ico("", weapon_data.getWeapon_hoverable_ico());
@@ -128,18 +127,17 @@ public class weapon_label extends JLabel implements MouseListener {
 
             weapon_data.setWeapon_choice_status(true);
 
-            /* OPTIMIZE EDILECEK */
+            /* ///////////////////////////////////////////////// OPTIMIZE EDILECEK */
             if (weapon_data.getCategory().compareTo("pistol") == 0) {
                 selected_pistol_pane.setPistol_label(weapon_data.getName(), weapon_data);
             }
-
             if (weapon_data.getCategory().compareTo("smg") == 0) {
                 selected_smg_pane.setSmg_label(weapon_data.getName(), weapon_data);
             }
-
             if (weapon_data.getCategory().compareTo("rifle") == 0) {
                 selected_rifle_pane.setRifle_label(weapon_data.getName(), weapon_data);
             }
+            /* ///////////////////////////////////////////////// OPTIMIZE EDILECEK */
 
             pick_pane.setBefore_weapon_data(weapon_data);
             pick_pane.setBefore_label(this);

@@ -1,28 +1,32 @@
 package com.inventory.app_common;
 
+import com.inventory.app_business.window_properties.window_properties;
+
 import javax.swing.*;
 import java.awt.*;
 
 
-public class app_window extends JFrame {
-    private final String WINDOW_TITLE = "Inventory App";
-    private final Dimension WINDOW_SIZE = new Dimension(900, 600);
+public class app_window extends window_properties {
 
-    public app_window() {
-        // Pencere yeniden boyutlandirilamaz.
-        this.setResizable(false);
+    private static app_window app_window;
 
-        // Pencerenin basligi
-        this.setTitle(WINDOW_TITLE);
-
-        // Pencerenin boyutu (WIDTHxHEIGHT)
-        this.setSize(WINDOW_SIZE);
+    private app_window() {
+        super();
 
         // Pencerenin kapatma dugmesine basilinca yapilacak olan islem.
         // Eger bu satir eklenmez ise carpi butonuna basilsa bile program arkaplanda calismaya devam eder.
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 
-        // Pencerenin ekranda gosterilmesini sagliyoruz.
-        this.setVisible(true);
+    public static app_window create_app_window() {
+        if (app_window == null) {
+            app_window = new app_window();
+        }
+        return app_window;
+    }
+
+
+    public static app_window get_app_window() {
+        return app_window;
     }
 }
