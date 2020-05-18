@@ -9,3 +9,7 @@
 
 ![IMG](https://i.hizliresim.com/bneKhL.png)
 
+![IMG](https://i.hizliresim.com/rLXJiZ.png)
+
+![IMG](https://i.hizliresim.com/tBIRQG.png)
+
