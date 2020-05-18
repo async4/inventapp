@@ -1,3 +1,4 @@
+package com.inventory.app_dal;
 
 import com.inventory.app_components.app_weapons.weapon;
 

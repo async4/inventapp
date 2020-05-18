@@ -1,4 +1,4 @@
-package com.inventory.app_dal.get_weapon_data;
+package com.inventory.app_dal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

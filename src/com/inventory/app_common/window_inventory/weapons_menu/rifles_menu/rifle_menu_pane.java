@@ -1,6 +1,6 @@
 package com.inventory.app_common.window_inventory.weapons_menu.rifles_menu;
 
-import com.inventory.app_dal.get_weapon_data.weapon_properties_data;
+import com.inventory.app_dal.weapon_properties_data;
 import com.inventory.app_common.window_inventory.weapons_menu.weapon_menu_pane;
 import com.inventory.app_components.app_weapons.weapon;
 

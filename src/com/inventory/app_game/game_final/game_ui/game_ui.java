@@ -1,12 +1,9 @@
-package com.inventory.app_game.game_content.game_ui;
+package com.inventory.app_game.game_final.game_ui;
 
-import com.inventory.app_game.game_content.game_ui.weapon_ui_pane.weapon_ui_pane;
+import com.inventory.app_game.game_final.game_ui.weapon_ui_pane.weapon_ui_pane;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class game_ui extends JPanel {
 

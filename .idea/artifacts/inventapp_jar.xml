@@ -1,9 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="inventapp:jar">
+  <artifact name="inventapp:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/inventapp_jar</output-path>
-    <root id="archive" name="inventapp.jar">
-      <element id="module-output" name="inventapp" />
-      <element id="extracted-dir" path="$USER_HOME$/Downloads/sqlite-jdbc-3.27.2.1.jar" path-in-jar="/" />
+    <root id="root">
+      <element id="archive" name="inventapp.jar">
+        <element id="module-output" name="inventapp" />
+      </element>
+      <element id="file-copy" path="$USER_HOME$/Downloads/sqlite-jdbc-3.27.2.1.jar" />
     </root>
   </artifact>
 </component>

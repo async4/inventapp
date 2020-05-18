@@ -2,27 +2,29 @@ package com.inventory.app_game.game_window;
 
 import com.inventory.app_business.window_properties.window_properties;
 import com.inventory.app_common.app_window;
-import com.inventory.app_game.game_content.game_final.game_pane.game_pane;
-import com.inventory.app_game.game_content.game_ui.game_ui;
+import com.inventory.app_game.game_data.game_data;
+import com.inventory.app_game.game_final.game_content.game_components.game_character.operator.operator;
+import com.inventory.app_game.game_final.game_content.game_pane.game_pane;
+import com.inventory.app_game.game_final.game_ui.game_ui;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 public class game_window extends window_properties implements WindowListener {
     private static game_window game_window;
 
+    private game_pane game;
+
     private game_window() {
         super();
 
-        this.add(new game_pane());
-        this.add(new game_ui());
+        // this.add(new game_ui());
 
-        // Pencerenin kapatma dugmesine basilinca yapilacak olan islem.
-        // Eger bu satir eklenmez ise carpi butonuna basilsa bile program arkaplanda calismaya devam eder.
+        this.game = game_pane.create_game_pane();
+        this.add(this.game);
+
         this.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-
         this.addWindowListener(this);
     }
 
@@ -40,13 +42,21 @@ public class game_window extends window_properties implements WindowListener {
     }
 
     @Override
+    public void windowActivated(WindowEvent e) {
+
+    }
+
+    @Override
     public void windowOpened(WindowEvent e) {
         app_window.get_app_window().setVisible(false);
+        this.game.start();
     }
 
     @Override
     public void windowClosing(WindowEvent e) {
         app_window.get_app_window().setVisible(true);
+
+        this.game.stop();
     }
 
     @Override
@@ -61,9 +71,7 @@ public class game_window extends window_properties implements WindowListener {
     public void windowDeiconified(WindowEvent e) {
     }
 
-    @Override
-    public void windowActivated(WindowEvent e) {
-    }
+
 
     @Override
     public void windowDeactivated(WindowEvent e) {

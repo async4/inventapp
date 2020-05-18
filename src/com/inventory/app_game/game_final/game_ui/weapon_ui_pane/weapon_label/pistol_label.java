@@ -1,9 +1,8 @@
-package com.inventory.app_game.game_content.game_ui.weapon_ui_pane.weapon_label;
+package com.inventory.app_game.game_final.game_ui.weapon_ui_pane.weapon_label;
 
 import com.inventory.app_game.game_data.game_data;
 
 import javax.swing.*;
-import java.awt.event.KeyEvent;
 
 public class pistol_label extends weapon_label {
     public pistol_label() {

@@ -2,7 +2,7 @@ package com.inventory;
 
 import com.inventory.app_common.app_content_pane;
 import com.inventory.app_common.app_window;
-import com.inventory.app_dal.get_weapon_data.weapon_properties_data;
+import com.inventory.app_dal.weapon_properties_data;
 
 import javax.swing.*;
 
