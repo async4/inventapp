@@ -1,5 +1,6 @@
 # inventapp
 
+## ui
 
 ![IMG](https://i.imgur.com/bUm264j.gif)
 
@@ -14,4 +15,8 @@
 ![IMG](https://i.hizliresim.com/rLXJiZ.png)
 
 ![IMG](https://i.hizliresim.com/tBIRQG.png)
+
+## game
+
+![](https://i.hizliresim.com/NmUmvB.png)
 
