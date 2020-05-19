@@ -1,7 +1,7 @@
 # inventapp
 
 
-![IMG](https://i.hizliresim.com/u6gPdi.gif)
+![IMG](https://i.imgur.com/bUm264j.gif)
 
 ![IMG](https://i.hizliresim.com/WuMufr.png)
 
