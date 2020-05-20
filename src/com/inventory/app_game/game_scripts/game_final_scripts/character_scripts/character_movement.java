@@ -1,4 +1,4 @@
-package com.inventory.app_game.game_scripts.game_final_scripts.character_handler;
+package com.inventory.app_game.game_scripts.game_final_scripts.character_scripts;
 
 import com.inventory.app_game.game_common.game_handler.game_handler;
 import com.inventory.app_game.game_common.game_object.game_object;

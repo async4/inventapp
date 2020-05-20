@@ -1,8 +1,8 @@
-package com.inventory.app_game.game_final.game_ui.weapon_ui_pane;
+package com.inventory.app_game.game_final.game_hud.weapon_ui_pane;
 
-import com.inventory.app_game.game_final.game_ui.weapon_ui_pane.weapon_label.pistol_label;
-import com.inventory.app_game.game_final.game_ui.weapon_ui_pane.weapon_label.rifle_label;
-import com.inventory.app_game.game_final.game_ui.weapon_ui_pane.weapon_label.smg_label;
+import com.inventory.app_game.game_final.game_hud.weapon_ui_pane.weapon_label.pistol_label;
+import com.inventory.app_game.game_final.game_hud.weapon_ui_pane.weapon_label.rifle_label;
+import com.inventory.app_game.game_final.game_hud.weapon_ui_pane.weapon_label.smg_label;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;

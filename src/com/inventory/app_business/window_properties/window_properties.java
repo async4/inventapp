@@ -4,8 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class window_properties extends JFrame {
+    public static final int WIDTH = 900, HEIGHT = 600;
+
     protected final String WINDOW_TITLE = "Inventory";
-    protected final Dimension WINDOW_SIZE = new Dimension(900, 600);
+    protected final Dimension WINDOW_SIZE = new Dimension(WIDTH, HEIGHT);
 
     public window_properties() {
         // Pencere yeniden boyutlandirilamaz.
