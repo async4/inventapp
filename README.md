@@ -1,6 +1,6 @@
 # inventapp
 
-## ui
+## User Interface (UI)
 
 ### blueprint
 ![IMG](https://i.hizliresim.com/WuMufr.png)
@@ -16,12 +16,12 @@
 
 ![IMG](https://i.hizliresim.com/tBIRQG.png)
 
-## game
+## GAME
 
 ![](https://i.hizliresim.com/NmUmvB.png)
 
 ![](https://i.hizliresim.com/3de6sw.png)
 
 
-## demo
+## DEMO
 ![IMG](https://i.imgur.com/bUm264j.gif)
