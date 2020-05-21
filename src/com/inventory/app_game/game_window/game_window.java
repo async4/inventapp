@@ -3,7 +3,6 @@ package com.inventory.app_game.game_window;
 import com.inventory.app_business.window_properties.window_properties;
 import com.inventory.app_common.app_window;
 import com.inventory.app_game.game_final.game_content.game_pane.game_pane;
-import com.inventory.app_game.game_final.game_hud.game_hud;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,11 +14,8 @@ public class game_window extends window_properties implements WindowListener {
 
     private game_pane game;
 
-
     private game_window() {
         super();
-
-        this.add(new game_hud());
 
         this.game = game_pane.create_game_pane();
         this.add(this.game);
@@ -41,10 +37,6 @@ public class game_window extends window_properties implements WindowListener {
     }
 
     @Override
-    public void windowActivated(WindowEvent e) {
-    }
-
-    @Override
     public void windowOpened(WindowEvent e) {
         this.setTitle("Game");
         app_window.get_app_window().setVisible(false);
@@ -55,6 +47,10 @@ public class game_window extends window_properties implements WindowListener {
     public void windowClosing(WindowEvent e) {
         app_window.get_app_window().setVisible(true);
         this.game.stop();
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
     }
 
     @Override

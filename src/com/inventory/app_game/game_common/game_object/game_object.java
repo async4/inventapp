@@ -1,8 +1,7 @@
 package com.inventory.app_game.game_common.game_object;
 
-import javax.swing.*;
+
 import java.awt.*;
-import java.awt.event.MouseAdapter;
 
 public abstract class game_object {
     protected object_tag tag;
@@ -18,6 +17,7 @@ public abstract class game_object {
         this.position_y = position_y;
     }
 
+    public abstract void update();
     public abstract void render(Graphics g);
 
     public object_tag getTag() {

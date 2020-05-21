@@ -58,6 +58,7 @@ public abstract class weapon_properties_data {
                                                    damage, range_of_fire, wait_after_shot, reload_time,
                                                    fire_mode, weapon_image, weapon_default_ico, weapon_hoverable_ico);
 
+
                         // Olusan weaponin suanlık icin hangi veriye aktaracagimizi bilemiyoruz.
                         // Bunun icin veriyi bellege yazmadan once tipini sorgulamamiz gerekiyor.
 
