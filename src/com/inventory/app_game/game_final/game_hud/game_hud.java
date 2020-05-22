@@ -32,6 +32,6 @@ public class game_hud {
 
         g2d.setColor(new Color(204, 214, 218));
         g2d.drawString(operator.current_weapon.name, 15, 15);
-        g2d.drawString(operator.current_weapon.mag_cap + " / " + operator.current_weapon.tot_mag_cap, 15, 30);
+        g2d.drawString(operator.current_weapon.magazine_capacity + " / " + operator.current_weapon.total_magazine_capacity, 15, 30);
     }
 }

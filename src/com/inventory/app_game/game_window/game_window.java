@@ -2,7 +2,7 @@ package com.inventory.app_game.game_window;
 
 import com.inventory.app_business.window_properties.window_properties;
 import com.inventory.app_common.app_window;
-import com.inventory.app_game.game_final.game_content.game_pane.game_pane;
+import com.inventory.app_game.game_final.game_content.game.game_pane;
 
 import javax.swing.*;
 import java.awt.*;

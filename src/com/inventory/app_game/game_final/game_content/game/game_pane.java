@@ -1,20 +1,19 @@
-package com.inventory.app_game.game_final.game_content.game_pane;
+package com.inventory.app_game.game_final.game_content.game;
 
 import com.inventory.app_business.window_properties.window_properties;
 import com.inventory.app_game.game_common.game_handler.game_handler;
 import com.inventory.app_game.game_common.game_object.object_tag;
 import com.inventory.app_game.game_common.game_target_spawner.target_spawner;
-import com.inventory.app_game.game_data.test.test;
 import com.inventory.app_game.game_data.game_data;
 import com.inventory.app_game.game_final.game_content.game_components.game_character.operator.operator;
 import com.inventory.app_game.game_final.game_hud.game_hud;
-import com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.character_action;
-import com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.character_movement;
+import com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.operator_action.controller.operator_action_fire;
+import com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.operator_action.controller.operator_action_movement;
+import com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.operator_action.controller.operator_action_reload;
 import com.inventory.app_game.game_scripts.game_hud_scripts.change_weapon;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.util.ArrayList;
 
 
 public class game_pane extends Canvas implements Runnable {
@@ -40,8 +39,10 @@ public class game_pane extends Canvas implements Runnable {
         spawner = new target_spawner(handler, hud);
 
         this.addKeyListener(new change_weapon(hud));
-        this.addMouseMotionListener(new character_movement(handler));
-        this.addMouseListener(new character_action(handler));
+
+        this.addKeyListener(new operator_action_reload(handler));
+        this.addMouseMotionListener(new operator_action_movement(handler));
+        this.addMouseListener(new operator_action_fire(handler));
     }
 
 
