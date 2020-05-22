@@ -5,9 +5,7 @@ import com.inventory.app_game.game_final.game_content.game_components.game_chara
 public abstract class fire {
 
     public static void fired() {
-
         operator.current_weapon.magazine_capacity--;
         operator.waiting = true;
-
     }
 }

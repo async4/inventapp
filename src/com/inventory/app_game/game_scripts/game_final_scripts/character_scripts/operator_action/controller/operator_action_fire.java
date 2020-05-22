@@ -22,7 +22,6 @@ public class operator_action_fire extends MouseAdapter {
         if (operator.reloading == false) {
             if (operator.current_weapon.magazine_capacity > 0) {
                 new Thread(() -> {
-
                     if (operator.waiting == false) {
                         fire.fired();
                         try {

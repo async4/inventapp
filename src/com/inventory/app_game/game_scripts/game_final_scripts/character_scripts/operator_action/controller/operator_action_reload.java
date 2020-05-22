@@ -21,7 +21,6 @@ public class operator_action_reload extends KeyAdapter {
                     try {
                         Thread.sleep(operator.current_weapon.reload_time * 1000);
                         reload.reloading();
-                        operator.reloading = false;
                     } catch (InterruptedException ex) {
                         ex.printStackTrace();
                     }
