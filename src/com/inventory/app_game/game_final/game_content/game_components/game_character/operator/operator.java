@@ -1,19 +1,25 @@
 package com.inventory.app_game.game_final.game_content.game_components.game_character.operator;
 
-import com.inventory.app_components.app_weapons.weapon;
 import com.inventory.app_game.game_common.game_object.game_object;
 import com.inventory.app_game.game_common.game_object.object_tag;
-import com.inventory.app_game.game_data.game_data;
+import com.inventory.app_game.game_data.test.test;
 
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
+import java.util.ArrayList;
 
 
 public class operator extends game_object {
+    public static test current_weapon;
 
-    public operator(object_tag tag, int position_x, int position_y, double angle) {
+    public static ArrayList<test> weapons;
+
+    public operator(object_tag tag, int position_x, int position_y, double angle, ArrayList<test> weapons) {
         super(tag, position_x, position_y, angle);
 
+        current_weapon = weapons.get(0);
+
+        this.weapons = weapons;
     }
 
 

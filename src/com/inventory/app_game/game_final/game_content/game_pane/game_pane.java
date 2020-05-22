@@ -4,6 +4,8 @@ import com.inventory.app_business.window_properties.window_properties;
 import com.inventory.app_game.game_common.game_handler.game_handler;
 import com.inventory.app_game.game_common.game_object.object_tag;
 import com.inventory.app_game.game_common.game_target_spawner.target_spawner;
+import com.inventory.app_game.game_data.test.test;
+import com.inventory.app_game.game_data.game_data;
 import com.inventory.app_game.game_final.game_content.game_components.game_character.operator.operator;
 import com.inventory.app_game.game_final.game_hud.game_hud;
 import com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.character_action;
@@ -12,9 +14,7 @@ import com.inventory.app_game.game_scripts.game_hud_scripts.change_weapon;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
+import java.util.ArrayList;
 
 
 public class game_pane extends Canvas implements Runnable {
@@ -32,7 +32,7 @@ public class game_pane extends Canvas implements Runnable {
     public game_pane() {
         handler = new game_handler();
         handler.add_object(
-            new operator(object_tag.operator,window_properties.WIDTH / 2 - 32,window_properties.HEIGHT / 2 - 32, 0.0)
+            new operator(object_tag.operator,window_properties.WIDTH / 2 - 32,window_properties.HEIGHT / 2 - 32, 0.0, game_data.weapons)
         );
 
         hud = new game_hud();

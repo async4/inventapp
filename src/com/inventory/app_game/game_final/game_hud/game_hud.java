@@ -31,5 +31,7 @@ public class game_hud {
         Graphics2D g2d = (Graphics2D) g;
 
         g2d.setColor(new Color(204, 214, 218));
+        g2d.drawString(operator.current_weapon.name, 15, 15);
+        g2d.drawString(operator.current_weapon.mag_cap + " / " + operator.current_weapon.tot_mag_cap, 15, 30);
     }
 }

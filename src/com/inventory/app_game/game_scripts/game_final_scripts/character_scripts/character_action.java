@@ -15,7 +15,7 @@ public class character_action extends MouseAdapter {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        operator.current_weapon.mag_cap--;
     }
 
     @Override

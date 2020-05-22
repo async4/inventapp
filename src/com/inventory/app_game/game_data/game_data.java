@@ -1,44 +1,31 @@
 package com.inventory.app_game.game_data;
 
 import com.inventory.app_components.app_weapons.weapon;
+import com.inventory.app_game.game_data.test.test;
+
+import java.util.ArrayList;
 
 
 public class game_data {
-    private static game_data game_data;
+    public static ArrayList<weapon> wp;
 
-    private final weapon pistol_data;
-    private final weapon smg_data;
-    private final weapon rifle_data;
+    public static ArrayList<test> weapons;
 
 
-    private game_data(weapon pistol_data, weapon smg_data, weapon rifle_data) {
-        this.pistol_data = pistol_data;
-        this.smg_data = smg_data;
-        this.rifle_data = rifle_data;
-    }
+    public game_data(weapon pistol_data, weapon smg_data, weapon rifle_data) {
+        wp = new ArrayList<>();
+
+        wp.add(pistol_data);
+        wp.add(smg_data);
+        wp.add(rifle_data);
+
+        weapons = new ArrayList<test>();;
 
 
-    public static void set_game_data(weapon pistol_data, weapon smg_data, weapon rifle_data) {
-        game_data = new game_data(pistol_data, smg_data, rifle_data);
-    }
+        for (var item: wp
+        ) {
+            weapons.add(new test(item.getName(), item.getMagazine_capacity()[0], item.getMagazine_capacity()[1]));
+        }
 
-
-    public weapon get_pistol_data() {
-        return pistol_data;
-    }
-
-
-    public weapon get_smg_data() {
-        return smg_data;
-    }
-
-
-    public weapon get_rifle_data() {
-        return rifle_data;
-    }
-
-
-    public static game_data get_game_data() {
-        return game_data;
     }
 }
