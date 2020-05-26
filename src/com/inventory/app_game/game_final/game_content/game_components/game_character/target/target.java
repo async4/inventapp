@@ -4,16 +4,17 @@ import com.inventory.app_game.game_common.game_object.game_object;
 import com.inventory.app_game.game_common.game_object.object_tag;
 
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 public class target extends game_object {
 
-    public target(object_tag tag, int position_x, int position_y, double angle) {
-        super(tag, position_x, position_y, angle);
+    public target(object_tag tag, int position_x, int position_y) {
+        super(tag, position_x, position_y);
 
     }
 
     public Rectangle get_bounds() {
-        return new Rectangle(position_x, position_y, 10, 10);
+        return new Rectangle((int) position_x, (int) position_y, 10, 10);
     }
 
     @Override
@@ -27,6 +28,6 @@ public class target extends game_object {
 
         g2d.setColor(Color.red);
         g2d.draw(this.get_bounds());
-
     }
+
 }

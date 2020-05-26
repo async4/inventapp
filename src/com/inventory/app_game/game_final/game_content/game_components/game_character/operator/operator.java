@@ -16,8 +16,8 @@ public class operator extends game_object {
     public static boolean reloading = false;
     public static boolean waiting = false;
 
-    public operator(object_tag tag, int position_x, int position_y, double angle, ArrayList<selected_weapon> weapons) {
-        super(tag, position_x, position_y, angle);
+    public operator(object_tag tag, double position_x, double position_y, double angle, ArrayList<selected_weapon> weapons) {
+        super(tag, position_x, position_y);
 
         current_weapon = weapons.get(0);
         this.weapons = weapons;
@@ -25,7 +25,7 @@ public class operator extends game_object {
 
 
     public Rectangle get_bounds() {
-        return new Rectangle(position_x, position_y, 10, 10);
+        return new Rectangle((int) position_x, (int) position_y, 9, 9);
     }
 
     @Override

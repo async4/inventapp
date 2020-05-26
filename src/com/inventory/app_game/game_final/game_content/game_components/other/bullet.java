@@ -6,27 +6,28 @@ import com.inventory.app_game.game_common.game_object.object_tag;
 import com.inventory.app_game.game_scripts.game_final_scripts.other_scripts.bullet_scripts.bullet_action;
 
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 
 public class bullet extends game_object {
 
-    public double bullet_velocity_x;
-    public double bullet_velocity_y;
+    private float bullet_velocity_x;
+    private float bullet_velocity_y;
 
     private game_handler handler;
 
-    public bullet(object_tag tag, game_handler handler, int position_x, int position_y, double angle) {
-        super(tag, position_x, position_y, angle);
+    public bullet(object_tag tag, game_handler handler, double position_x, double position_y) {
+        super(tag, position_x, position_y);
         this.handler = handler;
     }
 
 
     @Override
     public void update() {
-        if (position_x <= 850 && position_x >= 0 || position_y <= 550 && position_y >= 0) {
-            position_x += bullet_velocity_x;
-            position_y += bullet_velocity_y;
+        position_x += bullet_velocity_x;
+        position_y += bullet_velocity_y;
 
+        if (position_x <= 850 && position_x >= 0 || position_y <= 550 && position_y >= 0) {
             for (int i = 0; i < handler.objects.size(); i++) {
                 game_object temp = handler.objects.get(i);
                 bullet_action.bullet_collision(handler, temp, this);
@@ -38,7 +39,7 @@ public class bullet extends game_object {
     }
 
     public Rectangle get_bounds() {
-        return new Rectangle(position_x + 5, position_y + 5, 3, 3);
+        return new Rectangle((int) position_x + 3, (int) position_y + 3, 3, 3);
     }
 
 
@@ -51,22 +52,22 @@ public class bullet extends game_object {
     }
 
 
-    public double getBullet_velocity_x() {
+    public float getBullet_velocity_x() {
         return bullet_velocity_x;
     }
 
 
-    public void setBullet_velocity_x(double bullet_velocity_x) {
+    public void setBullet_velocity_x(float bullet_velocity_x) {
         this.bullet_velocity_x = bullet_velocity_x;
     }
 
 
-    public double getBullet_velocity_y() {
+    public float getBullet_velocity_y() {
         return bullet_velocity_y;
     }
 
 
-    public void setBullet_velocity_y(double bullet_velocity_y) {
+    public void setBullet_velocity_y(float bullet_velocity_y) {
         this.bullet_velocity_y = bullet_velocity_y;
     }
 

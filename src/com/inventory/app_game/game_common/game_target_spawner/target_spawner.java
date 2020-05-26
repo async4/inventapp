@@ -18,7 +18,7 @@ public class target_spawner {
         for (int i = 0; i < 10; i++) {
             ArrayList<Integer> location = random_location.generate_random_location();
 
-            handler.add_object(new target(object_tag.target, location.get(0), location.get(1), 0));
+            handler.add_object(new target(object_tag.target, location.get(0), location.get(1)));
         }
 
 

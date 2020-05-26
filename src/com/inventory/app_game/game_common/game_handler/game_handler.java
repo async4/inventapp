@@ -18,6 +18,8 @@ public class game_handler {
             temp.update();
         }
 
+        /*
+
         for (int i = 0; i < objects.size(); i++) {
             if (objects.get(i).getTag() == object_tag.bullet) {
                 System.out.println("bullet");
@@ -26,6 +28,8 @@ public class game_handler {
             }
         }
 
+
+         */
     }
 
 

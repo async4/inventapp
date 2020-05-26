@@ -33,14 +33,12 @@ public class controller_fire extends MouseAdapter {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        int mouse_x = e.getX();
-        int mouse_y = e.getY();
-
-        System.out.println("$mouse_x: " + mouse_x + " $mouse_y: " + mouse_y);
-
         if (operator_object != null) {
             if (operator.reloading == false) {
                 if (operator.current_weapon.magazine_capacity > 0) {
+                    double mouse_x = e.getX();
+                    double mouse_y = e.getY();
+
                     new Thread(() -> {
                         if (operator.waiting == false) {
                             operator_action.fire();
