@@ -24,25 +24,20 @@ public class operator extends game_object {
     }
 
 
-    @Override
-    public void update() {
+    public Rectangle get_bounds() {
+        return new Rectangle(position_x, position_y, 10, 10);
     }
+
+    @Override
+    public void update() {}
 
 
     @Override
     public void render(Graphics g) {
-        g.setColor(Color.green);
-        g.fillRect(position_x, position_y, 3, 3);
-
         Graphics2D g2d = (Graphics2D) g;
 
-        g2d.rotate(
-        Math.atan2(position_y - mouse_y, position_x - mouse_x) - Math.PI / 2 + 0.68,
-              position_x,
-              position_y
-        );
-
-        g.setColor(new Color(191, 197, 199));
-        g2d.draw(new Ellipse2D.Double(position_x, position_y, 32, 32));
+        g2d.setColor(new Color(191, 197, 199));
+        g2d.draw(get_bounds());
     }
+
 }

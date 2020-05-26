@@ -1,4 +1,4 @@
-package com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.operator_action.controller;
+package com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.operator_scripts.controller;
 
 import com.inventory.app_game.game_common.game_handler.game_handler;
 import com.inventory.app_game.game_common.game_object.game_object;
@@ -7,12 +7,16 @@ import com.inventory.app_game.game_common.game_object.object_tag;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class operator_action_movement extends MouseAdapter {
+
+public class controller_movement extends MouseAdapter {
+
     private game_handler handler;
 
-    public operator_action_movement(game_handler handler) {
+
+    public controller_movement(game_handler handler) {
         this.handler = handler;
     }
+
 
     @Override
     public void mouseMoved(MouseEvent e) {
@@ -30,4 +34,6 @@ public class operator_action_movement extends MouseAdapter {
             }
         }
     }
+
+
 }

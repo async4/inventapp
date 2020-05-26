@@ -1,12 +1,15 @@
 package com.inventory.app_game.game_common.game_object;
 
 
+import javax.swing.*;
 import java.awt.*;
 
 public abstract class game_object {
     protected object_tag tag;
     protected int position_x;
     protected int position_y;
+
+    protected double angle;
 
     protected double mouse_x;
     protected double mouse_y;
@@ -15,10 +18,12 @@ public abstract class game_object {
         this.tag = tag;
         this.position_x = position_x;
         this.position_y = position_y;
+        this.angle = angle;
     }
 
     public abstract void update();
     public abstract void render(Graphics g);
+    public abstract Rectangle get_bounds();
 
     public object_tag getTag() {
         return tag;
@@ -38,6 +43,14 @@ public abstract class game_object {
 
     public void setPosition_y(int position_y) {
         this.position_y = position_y;
+    }
+
+    public double getAngle() {
+        return angle;
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
     }
 
     public double getMouse_x() {

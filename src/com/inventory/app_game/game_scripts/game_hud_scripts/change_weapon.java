@@ -19,18 +19,18 @@ public class change_weapon extends KeyAdapter {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_1) {
-            operator.current_weapon = operator.weapons.get(0);
-        }
+        if (operator.reloading == false) {
+            if (e.getKeyCode() == KeyEvent.VK_1) {
+                operator.current_weapon = operator.weapons.get(0);
+            }
 
-        if (e.getKeyCode() == KeyEvent.VK_2) {
-            operator.current_weapon = operator.weapons.get(1);
+            if (e.getKeyCode() == KeyEvent.VK_2) {
+                operator.current_weapon = operator.weapons.get(1);
+            }
 
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_3) {
-            operator.current_weapon = operator.weapons.get(2);
-
+            if (e.getKeyCode() == KeyEvent.VK_3) {
+                operator.current_weapon = operator.weapons.get(2);
+            }
         }
     }
 }
