@@ -4,11 +4,10 @@ import com.inventory.app_game.game_common.game_object.game_object;
 import com.inventory.app_game.game_common.game_object.object_tag;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
 
 public class target extends game_object {
 
-    public target(object_tag tag, int position_x, int position_y) {
+    public target(object_tag tag, double position_x, double position_y) {
         super(tag, position_x, position_y);
 
     }

@@ -6,7 +6,6 @@ import com.inventory.app_game.game_common.game_object.object_tag;
 import com.inventory.app_game.game_scripts.game_final_scripts.other_scripts.bullet_scripts.bullet_action;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
 
 
 public class bullet extends game_object {
@@ -39,7 +38,7 @@ public class bullet extends game_object {
     }
 
     public Rectangle get_bounds() {
-        return new Rectangle((int) position_x + 3, (int) position_y + 3, 3, 3);
+        return new Rectangle((int) position_x + 1, (int) position_y + 1, 1, 1);
     }
 
 

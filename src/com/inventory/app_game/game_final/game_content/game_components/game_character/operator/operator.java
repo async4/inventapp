@@ -16,7 +16,7 @@ public class operator extends game_object {
     public static boolean reloading = false;
     public static boolean waiting = false;
 
-    public operator(object_tag tag, double position_x, double position_y, double angle, ArrayList<selected_weapon> weapons) {
+    public operator(object_tag tag, double position_x, double position_y, ArrayList<selected_weapon> weapons) {
         super(tag, position_x, position_y);
 
         current_weapon = weapons.get(0);

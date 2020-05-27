@@ -111,13 +111,13 @@ public class weapon_label extends JLabel implements MouseListener {
 
             /* ///////////////////////////////////////////////// OPTIMIZE EDILECEK */
             if (weapon_data.getCategory().compareTo("pistol") == 0) {
-                selected_pistol_pane.setPistol_label("empty", null);
+                selected_pistol_pane.setPistol_label("empty slot", null);
             }
             if (weapon_data.getCategory().compareTo("smg") == 0) {
-                selected_smg_pane.setSmg_label("empty", null);
+                selected_smg_pane.setSmg_label("empty slot", null);
             }
             if (weapon_data.getCategory().compareTo("rifle") == 0) {
-                selected_rifle_pane.setRifle_label("empty", null);
+                selected_rifle_pane.setRifle_label("empty slot", null);
             }
             /* ///////////////////////////////////////////////// OPTIMIZE EDILECEK */
 

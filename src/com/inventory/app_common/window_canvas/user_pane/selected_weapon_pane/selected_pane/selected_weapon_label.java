@@ -12,7 +12,7 @@ public class selected_weapon_label extends JLabel {
         this.setForeground(new Color(170, 170, 170));
         this.setVerticalAlignment(SwingConstants.CENTER);
         this.setHorizontalAlignment(SwingConstants.CENTER);
-        this.setText("empty");
+        this.setText("empty slot");
     }
 
     public static void create_selected_weapon_label() {

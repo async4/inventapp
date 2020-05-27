@@ -10,11 +10,10 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 public class game_window extends window_properties implements WindowListener {
-    private static game_window game_window;
 
     private game_pane game;
 
-    private game_window() {
+    public game_window() {
         super();
 
         this.game = game_pane.create_game_pane();
@@ -23,17 +22,6 @@ public class game_window extends window_properties implements WindowListener {
         this.setCursor(Cursor.CROSSHAIR_CURSOR);
         this.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE );
         this.addWindowListener(this);
-    }
-
-    public static void create_game_window() {
-        if (game_window != null) {
-            game_window = null;
-        }
-        game_window = new game_window();
-    }
-
-    public static game_window getGame_window() {
-        return game_window;
     }
 
     @Override

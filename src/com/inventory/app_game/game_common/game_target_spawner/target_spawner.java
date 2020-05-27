@@ -8,26 +8,10 @@ import com.inventory.app_game.game_scripts.game_final_scripts.character_scripts.
 import java.awt.*;
 import java.util.ArrayList;
 
-public class target_spawner {
+public abstract class target_spawner {
 
-    private game_handler handler;
-
-    public target_spawner(game_handler handler) {
-        this.handler = handler;
-
-        for (int i = 0; i < 10; i++) {
-            ArrayList<Integer> location = random_location.generate_random_location();
-
-            handler.add_object(new target(object_tag.target, location.get(0), location.get(1)));
-        }
-
-
-    }
-
-    public void update() {
-
-    }
-
-    public void render(Graphics g) {
+    public static void spawn(game_handler handler) {
+        ArrayList<Double> location = random_location.generate_random_location();
+        handler.add_object(new target(object_tag.target, location.get(0), location.get(1)));
     }
 }

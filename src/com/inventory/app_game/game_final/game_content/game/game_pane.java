@@ -25,15 +25,18 @@ public class game_pane extends Canvas implements Runnable {
 
     private game_handler handler;
     private game_hud hud;
-    private target_spawner spawner;
+
 
 
     public game_pane() {
         handler = new game_handler();
-        spawner = new target_spawner(handler);
+
+        for (int i = 0; i < 10; i++) {
+            target_spawner.spawn(handler);
+        }
 
         handler.add_object(
-            new operator(object_tag.operator,window_properties.WIDTH / 2 - 32,window_properties.HEIGHT / 2 - 32, 0.0, game_data.weapons)
+            new operator(object_tag.operator,window_properties.WIDTH / 2 - 32,window_properties.HEIGHT / 2 - 32, game_data.weapons)
         );
 
         hud = new game_hud();
@@ -103,7 +106,6 @@ public class game_pane extends Canvas implements Runnable {
     public synchronized void update() {
         handler.update();
         hud.update();
-        spawner.update();
     }
 
 
@@ -120,7 +122,6 @@ public class game_pane extends Canvas implements Runnable {
         g.fillRect(0, 0, window_properties.WIDTH, window_properties.HEIGHT);
 
         hud.render(g);
-        spawner.render(g);
         handler.render(g);
 
         g.dispose();
