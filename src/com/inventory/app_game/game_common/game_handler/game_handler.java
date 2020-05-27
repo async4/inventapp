@@ -1,7 +1,6 @@
 package com.inventory.app_game.game_common.game_handler;
 
 import com.inventory.app_game.game_common.game_object.game_object;
-import com.inventory.app_game.game_common.game_object.object_tag;
 
 import java.awt.*;
 import java.util.LinkedList;
@@ -17,15 +16,6 @@ public class game_handler {
             game_object temp = objects.get(i);
             temp.update();
         }
-
-        for (int i = 0; i < objects.size(); i++) {
-            if (objects.get(i).getTag() == object_tag.bullet) {
-                System.out.println("bullet");
-            } else {
-                System.out.println(" ");
-            }
-        }
-
     }
 
 

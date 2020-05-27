@@ -1,6 +1,6 @@
 package com.inventory.app_dal;
 
-import com.inventory.app_components.app_weapons.weapon;
+import com.inventory.app_common.weapon;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

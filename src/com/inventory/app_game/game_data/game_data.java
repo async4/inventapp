@@ -1,6 +1,6 @@
 package com.inventory.app_game.game_data;
 
-import com.inventory.app_components.app_weapons.weapon;
+import com.inventory.app_common.weapon;
 import com.inventory.app_game.game_data.selected_weapon.selected_weapon;
 
 import java.util.ArrayList;

@@ -1,7 +1,5 @@
 package com.inventory.app_game.game_final.game_hud;
 
-import com.inventory.app_components.app_weapons.weapon;
-import com.inventory.app_game.game_data.game_data;
 import com.inventory.app_game.game_final.game_content.game_components.game_character.operator.operator;
 
 import java.awt.*;

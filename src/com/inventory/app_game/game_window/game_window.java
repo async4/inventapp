@@ -1,7 +1,7 @@
 package com.inventory.app_game.game_window;
 
-import com.inventory.app_business.window_properties.window_properties;
-import com.inventory.app_common.app_window;
+import com.inventory.app_common.window_properties;
+import com.inventory.app_final.ui.window_frame;
 import com.inventory.app_game.game_final.game_content.game.game_pane;
 
 import javax.swing.*;
@@ -27,13 +27,13 @@ public class game_window extends window_properties implements WindowListener {
     @Override
     public void windowOpened(WindowEvent e) {
         this.setTitle("Game");
-        app_window.get_app_window().setVisible(false);
+        window_frame.get_app_window().setVisible(false);
         this.game.start();
     }
 
     @Override
     public void windowClosing(WindowEvent e) {
-        app_window.get_app_window().setVisible(true);
+        window_frame.get_app_window().setVisible(true);
         this.game.stop();
     }
 

@@ -1,6 +1,6 @@
 package com.inventory.app_game.game_final.game_content.game;
 
-import com.inventory.app_business.window_properties.window_properties;
+import com.inventory.app_common.window_properties;
 import com.inventory.app_game.game_common.game_handler.game_handler;
 import com.inventory.app_game.game_common.game_object.object_tag;
 import com.inventory.app_game.game_common.game_target_spawner.target_spawner;

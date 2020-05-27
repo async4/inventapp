@@ -1,7 +1,5 @@
 package com.inventory.app_game.game_data.selected_weapon;
 
-import com.inventory.app_components.app_weapons.weapon;
-
 public class selected_weapon {
 
     public String category;

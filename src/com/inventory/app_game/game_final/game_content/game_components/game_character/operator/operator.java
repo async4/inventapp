@@ -5,7 +5,6 @@ import com.inventory.app_game.game_common.game_object.object_tag;
 import com.inventory.app_game.game_data.selected_weapon.selected_weapon;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 
 

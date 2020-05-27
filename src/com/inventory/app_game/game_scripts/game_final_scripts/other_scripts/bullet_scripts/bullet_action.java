@@ -34,17 +34,3 @@ public abstract class bullet_action {
     }
 
 }
-
-        /*
-        System.out.println("mouse y: " + mouse_y + " mouse x: " + mouse_x);
-
-        System.out.println("position y: " + operator_object.getPosition_y() + " position x: " + operator_object.getPosition_x());
-
-
-        double angle = Math.atan2(mouse_y - operator_object.getPosition_y(), mouse_x - operator_object.getPosition_x());
-        System.out.println("atan2(y, x): " + angle);
-
-        System.out.println("cos(deg): " + Math.cos(angle) + " sin(deg): " + Math.sin(angle));
-
-        // float angle = (float) Math.atan2(mouse_y - operator_object.getPosition_y(), mouse_x - operator_object.getPosition_x());
-         */
