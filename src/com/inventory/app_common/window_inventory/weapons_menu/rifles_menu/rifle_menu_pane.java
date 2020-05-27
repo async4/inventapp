@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 
 public class rifle_menu_pane extends weapon_menu_pane {
-    private static rifle_menu_pane _rifle_menu_pane;
-
 
     public rifle_menu_pane() {
         super();
@@ -19,19 +17,6 @@ public class rifle_menu_pane extends weapon_menu_pane {
         this.add(panel_title);
 
         this.get_weapon_data();
-    }
-
-
-    public static rifle_menu_pane create_rifle_menu_pane() {
-        if (_rifle_menu_pane == null) {
-            _rifle_menu_pane = new rifle_menu_pane();
-        }
-        return _rifle_menu_pane;
-    }
-
-
-    public static rifle_menu_pane get_rifle_menu_pane() {
-        return _rifle_menu_pane;
     }
 
 

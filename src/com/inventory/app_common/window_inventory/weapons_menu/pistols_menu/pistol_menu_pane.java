@@ -23,18 +23,6 @@ public class pistol_menu_pane extends weapon_menu_pane {
     }
 
 
-    public static pistol_menu_pane create_pistol_menu() {
-        if (_pistol_menu_pane == null) {
-            _pistol_menu_pane = new pistol_menu_pane();
-        }
-        return _pistol_menu_pane;
-    }
-
-
-    public static pistol_menu_pane get_pistol_menu_pane() {
-        return _pistol_menu_pane;
-    }
-
 
     @Override
     public void get_weapon_data() {

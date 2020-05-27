@@ -30,10 +30,10 @@ public class app_content_pane extends JSplitPane {
         this.setOrientation(1);
 
         // Sol panele gelecek olan envanter paneli.
-        app_inventory_pane inventory_pane = app_inventory_pane.create_inventory_pane();
+        app_inventory_pane inventory_pane = new app_inventory_pane();
 
         // Sag panele gelecek olan cizim paneli.
-        app_canvas_pane canvas_pane = app_canvas_pane.create_canvas_pane();
+        app_canvas_pane canvas_pane = new app_canvas_pane();
 
         // Sol panele envanter panelini ekliyoruz.
         this.setLeftComponent(inventory_pane);

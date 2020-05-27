@@ -15,10 +15,10 @@ import java.awt.event.MouseListener;
 
 
 public class weapon_label extends JLabel implements MouseListener {
-    private static weapon_label _weapon_label;
 
     private weapon weapon_data;
     private pick_weapon_pane pick_pane;
+
 
     public weapon_label(weapon weapon_data, pick_weapon_pane pick_pane) {
         this.weapon_data = weapon_data;
@@ -27,16 +27,6 @@ public class weapon_label extends JLabel implements MouseListener {
         // Uzerine gelinen label a weapon in ismi eklenir.
         this.setText(this.weapon_data.getName());
         this.addMouseListener(this);
-    }
-
-
-    public static void create_weapon_label(weapon weapon_data, pick_weapon_pane pick_pane) {
-        _weapon_label = new weapon_label(weapon_data, pick_pane);
-    }
-
-
-    public static weapon_label get_weapon_label() {
-        return _weapon_label;
     }
 
 

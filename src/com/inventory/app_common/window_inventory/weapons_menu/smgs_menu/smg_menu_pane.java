@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 
 public class smg_menu_pane extends weapon_menu_pane {
-    private static smg_menu_pane _smg_menu_pane;
+
 
     public smg_menu_pane() {
         super();
@@ -19,19 +19,6 @@ public class smg_menu_pane extends weapon_menu_pane {
         this.add(panel_title);
 
         this.get_weapon_data();
-    }
-
-
-    public static smg_menu_pane create_smg_menu_pane() {
-        if (_smg_menu_pane == null) {
-            _smg_menu_pane = new smg_menu_pane();
-        }
-        return _smg_menu_pane;
-    }
-
-
-    public static smg_menu_pane get_smg_menu_pane() {
-        return _smg_menu_pane;
     }
 
 

@@ -1,7 +1,7 @@
 package com.inventory.app_common.window_canvas.user_pane;
 
 import com.inventory.app_common.window_canvas.user_pane.selected_weapon_pane.selected_weapon_pane;
-import com.inventory.app_common.window_canvas.user_pane.solider_image_pane.user_soldier_image;
+import com.inventory.app_common.window_canvas.user_pane.soldier_image_pane.user_soldier_image;
 
 import javax.swing.*;
 import java.awt.*;

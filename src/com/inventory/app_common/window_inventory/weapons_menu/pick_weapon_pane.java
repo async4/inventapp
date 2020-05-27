@@ -7,6 +7,7 @@ import java.awt.*;
 
 
 public class pick_weapon_pane extends JPanel {
+
     private final Dimension PANE_SIZE = new Dimension(240, 140);
     private final Color PANE_COLOR = new Color(33, 33, 33);
 
@@ -35,7 +36,9 @@ public class pick_weapon_pane extends JPanel {
         return before_label;
     }
 
+
     public void setBefore_label(weapon_label current_label) {
         this.before_label = current_label;
     }
+
 }

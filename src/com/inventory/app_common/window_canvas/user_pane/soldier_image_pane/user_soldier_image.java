@@ -1,4 +1,4 @@
-package com.inventory.app_common.window_canvas.user_pane.solider_image_pane;
+package com.inventory.app_common.window_canvas.user_pane.soldier_image_pane;
 
 import javax.swing.*;
 import java.awt.*;

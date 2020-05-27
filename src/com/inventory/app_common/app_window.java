@@ -3,7 +3,6 @@ package com.inventory.app_common;
 import com.inventory.app_business.window_properties.window_properties;
 
 import javax.swing.*;
-import java.awt.*;
 
 
 public class app_window extends window_properties {
