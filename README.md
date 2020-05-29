@@ -12,19 +12,15 @@
 
 ![IMG](https://i.hizliresim.com/bneKhL.png)
 
-![IMG](https://i.hizliresim.com/rLXJiZ.png)
-
-![IMG](https://i.hizliresim.com/tBIRQG.png)
-
 ## GAME
 
-![](https://i.hizliresim.com/NmUmvB.png)
+![]()
 
-![](https://i.hizliresim.com/3de6sw.png)
+![](
 
 
 ## DEMO
-![IMG](https://i.imgur.com/bUm264j.gif)
+![IMG]()
 
 ## REFERENCES
 * https://www.youtube.com/playlist?list=PLW3Zl3wyJwWOpdhYedlD-yCB7WQoHf-My
