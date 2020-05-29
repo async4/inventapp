@@ -21,9 +21,6 @@
 
 ![IMG](https://i.imgur.com/Kqmk6Uk.png)
 
-![IMG](https://i.imgur.com/JV5d6r6.png)
-
-
 ## GAME
 
 ![IMG](https://i.imgur.com/JV5d6r6.png)
