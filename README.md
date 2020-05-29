@@ -3,7 +3,7 @@
 ## User Interface (UI)
 
 ### draft
-![IMG] (https://i.hizliresim.com/WuMufr.png)
+![IMG](https://i.hizliresim.com/WuMufr.png)
 
 ### first commit
 ![IMG](https://i.hizliresim.com/GOpPDK.png)
@@ -13,7 +13,9 @@
 ![IMG](https://i.hizliresim.com/bneKhL.png)
 
 ### progress
-![IMG] (https://i.imgur.com/acMQDQ7.png)
+![IMG](https://i.imgur.com/acMQDQ7.png)
+
+
 ## GAME
 
 ![]()
