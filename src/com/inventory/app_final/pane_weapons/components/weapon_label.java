@@ -90,16 +90,17 @@ public class weapon_label extends JLabel {
     }
 
 
-    private void change_slot_prop(String slot_name, weapon weapon_data) {
-        if (weapon_data.getCategory().compareTo("pistol") == 0) {
+    private void change_slot_prop(String slot_name, String category_name, weapon weapon_data) {
+
+        if (category_name.compareTo("pistol") == 0) {
             slot_pane.slots.get(0).set_label(slot_name, weapon_data);
         }
 
-        if (weapon_data.getCategory().compareTo("smg") == 0) {
+        if (category_name.compareTo("smg") == 0) {
             slot_pane.slots.get(1).set_label(slot_name, weapon_data);
         }
 
-        if (weapon_data.getCategory().compareTo("rifle") == 0) {
+        if (category_name.compareTo("rifle") == 0) {
             slot_pane.slots.get(2).set_label(slot_name, weapon_data);
         }
     }
@@ -118,7 +119,7 @@ public class weapon_label extends JLabel {
         if (weapon_data.getWeapon_choice_status() && before_weapon_data.getWeapon_choice_status()) {
             weapon_data.setWeapon_choice_status(false);
 
-            change_slot_prop("empty slot", weapon_data);
+            change_slot_prop("empty slot", weapon_data.getCategory(), null);
 
         } else {
             change_label_ico("", weapon_data.getWeapon_hoverable_ico());
@@ -126,7 +127,7 @@ public class weapon_label extends JLabel {
 
             weapon_data.setWeapon_choice_status(true);
 
-            change_slot_prop(weapon_data.getName(), weapon_data);
+            change_slot_prop(weapon_data.getName(), weapon_data.getCategory(), weapon_data);
 
             pick_pane.setBefore_weapon_data(weapon_data);
             pick_pane.setBefore_label(this);

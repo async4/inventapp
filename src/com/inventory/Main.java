@@ -1,3 +1,20 @@
+/*
+	GROUP: 2A (IO)
+
+	Name: Sergen
+	Surname: Cepoglu
+	Number: 02195076070
+
+	Name: Oguzhan
+	Surname: Celik
+	Number: 02195076023
+
+	Selected Project: 3
+	Presentation Date: 08.06.2020
+
+	Additional: https://github.com/async4/inventapp
+*/
+
 package com.inventory;
 
 import com.inventory.app_final.ui.content_pane;
