@@ -7,5 +7,4 @@ public interface general_scripts {
     void update();
     void render(Graphics g);
     Rectangle get_bounds();
-
 }

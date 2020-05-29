@@ -11,7 +11,12 @@ public class game_data {
 
     public static ArrayList<selected_weapon> weapons;
 
+    /* silah verilerini veritabanindan cektikten sonra bir arrayliste aktariyoruz ve o arraylist tum
+       programda kullanilabilir bir arraylist oluyor yani static oluyor.
 
+       Oyun icinde mermi kapasitesinin azalacagini dusundugumuzde azalan mermi verisi
+       genel programi etkilememesi icin ayri bir silah verisi class i olusturuyoruz.
+     */
     public game_data(weapon pistol_data, weapon smg_data, weapon rifle_data) {
         wp = new ArrayList<>();
 

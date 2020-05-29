@@ -10,7 +10,10 @@ import java.awt.*;
 
 public class bullet extends game_object {
 
+    // X konumundaki hizi
     private float bullet_velocity_x;
+
+    // Y konumundaki hizi
     private float bullet_velocity_y;
 
     private game_handler handler;
@@ -26,17 +29,20 @@ public class bullet extends game_object {
         position_x += bullet_velocity_x;
         position_y += bullet_velocity_y;
 
+        // Mermi objesi belirtilen konumda ise surekli olarak target ile carpisma durumu kontrol edilir..
         if (position_x <= 850 && position_x >= 0 || position_y <= 550 && position_y >= 0) {
             for (int i = 0; i < handler.objects.size(); i++) {
                 game_object temp = handler.objects.get(i);
                 bullet_action.bullet_collision(handler, temp, this);
             }
         } else {
+            // Eger ekranin disina cikarsa hafizada yer kaplamamasi icin bellekten silinir.
             handler.remove_object(this);
         }
 
     }
 
+    // Bullet in sinirlari.
     public Rectangle get_bounds() {
         return new Rectangle((int) position_x + 1, (int) position_y + 1, 1, 1);
     }
@@ -50,21 +56,9 @@ public class bullet extends game_object {
         g2d.draw(get_bounds());
     }
 
-
-    public float getBullet_velocity_x() {
-        return bullet_velocity_x;
-    }
-
-
     public void setBullet_velocity_x(float bullet_velocity_x) {
         this.bullet_velocity_x = bullet_velocity_x;
     }
-
-
-    public float getBullet_velocity_y() {
-        return bullet_velocity_y;
-    }
-
 
     public void setBullet_velocity_y(float bullet_velocity_y) {
         this.bullet_velocity_y = bullet_velocity_y;

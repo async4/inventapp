@@ -9,11 +9,16 @@ import java.util.ArrayList;
 
 
 public class operator extends game_object {
+
+    // Operatorun o anki kullanmis oldugu silah.
     public static selected_weapon current_weapon;
+
+    // Operatorun sectigi silahlar.
     public static ArrayList<selected_weapon> weapons;
 
     public static boolean reloading = false;
     public static boolean waiting = false;
+
 
     public operator(object_tag tag, double position_x, double position_y, ArrayList<selected_weapon> weapons) {
         super(tag, position_x, position_y);
@@ -26,6 +31,7 @@ public class operator extends game_object {
     public Rectangle get_bounds() {
         return new Rectangle((int) position_x, (int) position_y, 9, 9);
     }
+
 
     @Override
     public void update() {}

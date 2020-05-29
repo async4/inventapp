@@ -39,6 +39,15 @@ public class controller_fire extends MouseAdapter {
                     double mouse_x = e.getX();
                     double mouse_y = e.getY();
 
+
+                    /* Lambda fonksiyonu ile async bir fonksiyon yapisi kullaniyoruz.
+                       Silah ateslendikten sonra tekrardan ateslemek icin beklenmesi gereken bir
+                       sure vardir. Async bir fonksiyon kullanilmasaydi ates ettikten sonra tum program
+                       silahin bekleme suresi kadar duracakti ve bu da istenmeyen bir durum olacakti.
+
+                       Ornegin eger kullanici ekran uzerinde hareket edebilseydi ve async bir yapi kullanilmasaydi
+                       ates ettikten sonra kullanici o sure boyunca hareket edemeyecekti cunku program durmus olacakti.
+                     */
                     new Thread(() -> {
                         if (operator.waiting == false) {
                             operator_action.fire();
