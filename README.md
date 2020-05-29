@@ -12,6 +12,8 @@
 
 ![IMG](https://i.hizliresim.com/bneKhL.png)
 
+### progress
+![IMG] (https://i.imgur.com/acMQDQ7.png)
 ## GAME
 
 ![]()
