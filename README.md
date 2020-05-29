@@ -2,17 +2,17 @@
 
 ## User Interface (UI)
 
-### draft
+### DRAFT
 ![IMG](https://i.hizliresim.com/WuMufr.png)
 
-### first commit
+### FIRST COMMIT
 ![IMG](https://i.hizliresim.com/GOpPDK.png)
 
 ![IMG](https://i.hizliresim.com/ptrn3p.png)
 
 ![IMG](https://i.hizliresim.com/bneKhL.png)
 
-### progress
+### PROGRESS
 ![IMG](https://i.imgur.com/acMQDQ7.png)
 
 ![IMG](https://i.imgur.com/w3AcRQW.png)
