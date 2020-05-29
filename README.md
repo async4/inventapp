@@ -26,7 +26,7 @@
 
 ## GAME
 
-![IMG](https://i.imgur.com/acMQDQ7.png)
+![IMG](https://i.imgur.com/JV5d6r6.png)
 
 ## LAYERS
 ![IMG](https://i.imgur.com/jv6gSrn.png)
