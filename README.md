@@ -23,18 +23,15 @@
 
 ![IMG](https://i.imgur.com/JV5d6r6.png)
 
-![IMG](https://i.imgur.com/acMQDQ7.png)
-
 
 ## GAME
 
-![]()
+![IMG](https://i.imgur.com/acMQDQ7.png)
 
-![](
+## LAYERS
+![IMG](https://i.imgur.com/jv6gSrn.png)
+![IMG](https://i.imgur.com/UjNaNTR.png)
 
-
-## DEMO
-![IMG]()
 
 ## REFERENCES
 * https://www.youtube.com/playlist?list=PLW3Zl3wyJwWOpdhYedlD-yCB7WQoHf-My
