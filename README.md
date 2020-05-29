@@ -3,7 +3,7 @@
 ## User Interface (UI)
 
 ### draft
-![IMG](https://i.hizliresim.com/WuMufr.png)
+![IMG] (https://i.hizliresim.com/WuMufr.png)
 
 ### first commit
 ![IMG](https://i.hizliresim.com/GOpPDK.png)
