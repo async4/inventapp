@@ -15,15 +15,15 @@
 ### progress
 ![IMG](https://i.imgur.com/acMQDQ7.png)
 
-![IMG](https://i.imgur.com/w3AcRQW)
+![IMG](https://i.imgur.com/w3AcRQW.png)
 
-![IMG](https://i.imgur.com/s2aFnLZ)
+![IMG](https://i.imgur.com/s2aFnLZ.png)
 
-![IMG](https://i.imgur.com/Kqmk6Uk)
+![IMG](https://i.imgur.com/Kqmk6Uk.png)
 
-![IMG](https://i.imgur.com/JV5d6r6)
+![IMG](https://i.imgur.com/JV5d6r6.png)
 
-![IMG](https://i.i.imgur.com/acMQDQ7.png)
+![IMG](https://i.imgur.com/acMQDQ7.png)
 
 
 ## GAME
