@@ -2,7 +2,7 @@
 
 ## User Interface (UI)
 
-### blueprint
+### draft
 ![IMG](https://i.hizliresim.com/WuMufr.png)
 
 ### first commit
