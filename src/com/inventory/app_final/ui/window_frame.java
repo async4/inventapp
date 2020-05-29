@@ -9,6 +9,7 @@ public class window_frame extends window_properties {
 
     private static window_frame window;
 
+
     private window_frame() {
         super();
 
@@ -28,4 +29,5 @@ public class window_frame extends window_properties {
     public static window_frame get_app_window() {
         return window;
     }
+    
 }

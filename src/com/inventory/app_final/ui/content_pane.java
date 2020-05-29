@@ -1,7 +1,7 @@
 package com.inventory.app_final.ui;
 
-import com.inventory.app_final.pane_canvas.canvas;
 import com.inventory.app_final.pane_inventory.inventory;
+import com.inventory.app_final.pane_weapons.weapons;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +12,7 @@ public class content_pane extends JSplitPane {
     private final Color PANE_BORDER_COLOR = new Color(30, 29, 34);
     private final Color PANE_COLOR = new Color(23, 21, 26);
     private final int DIVIDER_LOC = 300;
+
 
     public content_pane() {
         // Ana Panelin yanlarinda beyazlik gorunmemesi icin border'ini degistiriyoruz.
@@ -30,19 +31,20 @@ public class content_pane extends JSplitPane {
         this.setOrientation(1);
 
         // Sol panele gelecek olan envanter paneli.
-        inventory inventory_pane = new inventory();
+        weapons weapons_pane = new weapons();
 
         // Sag panele gelecek olan cizim paneli.
-        canvas canvas_pane = new canvas();
+        inventory inventory_pane = new inventory();
 
         // Sol panele envanter panelini ekliyoruz.
-        this.setLeftComponent(inventory_pane);
+        this.setLeftComponent(weapons_pane);
 
         // Sag panele cizim panelini ekliyoruz.
-        this.setRightComponent(canvas_pane);
+        this.setRightComponent(inventory_pane);
 
         // Ortada cikacak olan ayracin konumu. 300 WIDTH.
         // Yani sol panel 300 WIDTH uzunlugunda. Sag panel ise 600 WIDTH uzunlugunda olacktir.
         this.setDividerLocation(DIVIDER_LOC);
     }
+
 }

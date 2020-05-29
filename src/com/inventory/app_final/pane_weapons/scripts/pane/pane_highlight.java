@@ -1,6 +1,6 @@
-package com.inventory.app_final.pane_inventory.scripts.pane;
+package com.inventory.app_final.pane_weapons.scripts.pane;
 
-import com.inventory.app_final.pane_inventory.components.weapon_pane;
+import com.inventory.app_final.pane_weapons.components.weapon_pane;
 
 import javax.swing.*;
 import java.awt.*;

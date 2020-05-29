@@ -1,10 +1,10 @@
-package com.inventory.app_final.pane_canvas.components.properties_pane;
+package com.inventory.app_final.pane_inventory.components.properties_pane;
 
 import javax.swing.*;
 import java.awt.*;
 
 
-public class image extends JPanel {
+public class image_pane extends JPanel {
 
     // Pane
     private final Dimension image_pane_size = new Dimension(450, 400);
@@ -21,7 +21,7 @@ public class image extends JPanel {
     private Font weapon_name_label_font = new Font(Font.SANS_SERIF, 1, 30);
 
 
-    public image() {
+    public image_pane() {
         this.setPreferredSize(image_pane_size);
         this.setBackground(image_pane_color);
 
@@ -48,4 +48,5 @@ public class image extends JPanel {
     public static JLabel get_weapon_name_label() {
         return weapon_name_label;
     }
+
 }

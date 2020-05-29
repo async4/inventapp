@@ -2,6 +2,7 @@ package com.inventory.app_common;
 
 
 public class weapon {
+ 
     // db data
     private final String name;
     private final String category;
@@ -99,4 +100,5 @@ public class weapon {
     public void setWeapon_choice_status(boolean status) {
         this.weapon_choice_status = status;
     }
+
 }

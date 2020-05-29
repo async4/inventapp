@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 
 public abstract class weapon_properties_data {
+ 
     private static ArrayList<weapon> pistols_data; // pistol verileri
     private static ArrayList<weapon> smgs_data; // smg verileri
     private static ArrayList<weapon> rifles_data; // rifle verileri
@@ -103,4 +104,5 @@ public abstract class weapon_properties_data {
     public static ArrayList<weapon> getRifles_data() {
         return rifles_data;
     }
+
 }

@@ -1,7 +1,7 @@
-package com.inventory.app_final.pane_inventory.components;
+package com.inventory.app_final.pane_weapons.components;
 
-import com.inventory.app_final.pane_inventory.scripts.pane.pane_highlight;
-import com.inventory.app_final.pane_inventory.scripts.pane.pick_weapon_pane;
+import com.inventory.app_final.pane_weapons.scripts.pane.pane_highlight;
+import com.inventory.app_final.pane_weapons.scripts.pane.pick_weapon_pane;
 import com.inventory.app_common.weapon;
 
 import javax.swing.*;
@@ -27,6 +27,8 @@ public  class weapon_pane extends JPanel  {
 
         this.setBackground(PANE_COLOR);
         this.setPreferredSize(PANE_SIZE);
+
+        // pane higlighter with mouse.
         this.addMouseListener(new pane_highlight(this));
     }
 

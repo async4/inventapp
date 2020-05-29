@@ -1,11 +1,11 @@
-package com.inventory.app_final.pane_canvas.components.properties_pane;
+package com.inventory.app_final.pane_inventory.components.properties_pane;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
 
-public class properties extends JPanel {
+public class properties_pane extends JPanel {
 
     private static final Dimension properties_pane_size = new Dimension(500, 100);
     private static final Color properties_pane_color = new Color(33, 33, 33);
@@ -24,7 +24,7 @@ public class properties extends JPanel {
     private ArrayList<JLabel> labels = new ArrayList<>();
 
 
-    public properties() {
+    public properties_pane() {
         this.setPreferredSize(properties_pane_size);
         this.setBackground(properties_pane_color);
 
@@ -47,7 +47,7 @@ public class properties extends JPanel {
         // Label in boyutu
         label.setPreferredSize(label_size);
 
-        // Label in iconu
+        // Label in icon'i
         label.setIcon(new ImageIcon(this.getClass().getResource(icons_path + icon_file)));
 
         // Label in rengi

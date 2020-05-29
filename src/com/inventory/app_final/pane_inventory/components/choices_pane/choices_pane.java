@@ -1,7 +1,7 @@
-package com.inventory.app_final.pane_canvas.components.choices_pane;
+package com.inventory.app_final.pane_inventory.components.choices_pane;
 
-import com.inventory.app_final.pane_canvas.components.choices_pane.soldier_image.image;
-import com.inventory.app_final.pane_canvas.components.choices_pane.weapon_slots.slot_pane;
+import com.inventory.app_final.pane_inventory.components.choices_pane.soldier_image.image_pane;
+import com.inventory.app_final.pane_inventory.components.choices_pane.weapon_slots.slot_pane;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +22,7 @@ public class choices_pane extends JSplitPane {
         this.setEnabled(false);
         this.setDividerSize(0);
         this.setOrientation(1);
-        this.setLeftComponent(new image());
+        this.setLeftComponent(new image_pane());
         this.setRightComponent(new slot_pane());
         this.setDividerLocation(DIVIDER_LOC);
         this.setVisible(true);

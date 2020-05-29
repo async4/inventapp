@@ -6,7 +6,9 @@ import java.sql.SQLException;
 
 
 public abstract class connect_db {
+
     private final static String JDBC_DRIVER_PATH = "jdbc:sqlite:res/db/";
+
 
     public static Connection connect(String database_name) {
         Connection connection = null;
@@ -25,4 +27,5 @@ public abstract class connect_db {
         // Baglanti sorunsuz veya sorunlu her iki durumda da baglanti geri gonderilir.
         return connection;
     }
+
 }

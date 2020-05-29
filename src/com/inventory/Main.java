@@ -9,6 +9,7 @@ import javax.swing.*;
 
 public class Main {
 
+
     private static void init() {
         // Ana ekran app_window sinifindan türetilir.
         window_frame frame = window_frame.create_app_window();

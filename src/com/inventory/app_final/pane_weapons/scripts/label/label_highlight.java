@@ -1,6 +1,6 @@
-package com.inventory.app_final.pane_inventory.scripts.label;
+package com.inventory.app_final.pane_weapons.scripts.label;
 
-import com.inventory.app_final.pane_inventory.components.weapon_label;
+import com.inventory.app_final.pane_weapons.components.weapon_label;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -32,7 +32,7 @@ public class label_highlight extends MouseAdapter {
         label.add_weapon_properties_to_pane();
 
         // User paneli gizlenir.
-        label.change_user_pane_visible_status(false);
+        label.change_inventory_pane_visible_status(false);
 
         // weapon properties paneli ekranda gozukur.
         label.change_prop_pane_visible_status(true);
@@ -47,7 +47,7 @@ public class label_highlight extends MouseAdapter {
         label.change_prop_pane_visible_status(false);
 
         // User paneli gosterilir.
-        label.change_user_pane_visible_status(true);
+        label.change_inventory_pane_visible_status(true);
     }
 
 }

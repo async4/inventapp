@@ -1,4 +1,4 @@
-package com.inventory.app_final.pane_canvas.components.choices_pane.weapon_slots.selected_pane;
+package com.inventory.app_final.pane_inventory.components.choices_pane.weapon_slots.selected_pane;
 
 import javax.swing.*;
 import java.awt.*;
