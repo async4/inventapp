@@ -3,14 +3,14 @@
 ## User Interface (UI)
 
 ### DRAFT
-![IMG](https://i.hizliresim.com/WuMufr.png)
+![](https://i.hizliresim.com/WuMufr.png)
 
 ### FIRST COMMIT
-![IMG](https://i.hizliresim.com/GOpPDK.png)
+![](https://i.hizliresim.com/GOpPDK.png)
 
-![IMG](https://i.hizliresim.com/ptrn3p.png)
+![](https://i.hizliresim.com/ptrn3p.png)
 
-![IMG](https://i.hizliresim.com/bneKhL.png)
+![](https://i.hizliresim.com/bneKhL.png)
 
 ### PROGRESS
 ![IMG](https://i.imgur.com/acMQDQ7.png)
