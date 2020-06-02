@@ -1,8 +1,8 @@
-# Inventapp
+# 🔌Inventapp
 
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
 
-## ***Installation***
+## 📌 ***Installation***
 ```sh
   $ git clone https://github.com/async4/inventapp.git
 ```
