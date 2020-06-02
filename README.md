@@ -1,7 +1,5 @@
 # inventapp
 
-## User Interface (UI)
-
 ## LAYERS
 ![IMG](https://i.imgur.com/jv6gSrn.png)
 ![IMG](https://i.imgur.com/UjNaNTR.png)
