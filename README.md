@@ -16,6 +16,8 @@
 ```bash
   java -jar inventapp.jar
 ```
+## Run with idea
+
 ## Layers
 ![IMG](https://i.imgur.com/jv6gSrn.png)
 ![IMG](https://i.imgur.com/UjNaNTR.png)
