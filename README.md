@@ -38,3 +38,6 @@
 * https://www.youtube.com/playlist?list=PLWms45O3n--6TvZmtFHaCWRZwEqnz2MHa
 * https://docs.oracle.com/javase/tutorial/uiswing/index.html
 * https://stackoverflow.com/
+
+<a href="data:application/octet-stream,DATA" download="FILENAME">TITLE</a>
+
