@@ -2,7 +2,7 @@
 
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
 
-## 📌 ***Installation***
+## 🔻 ***Installation***
 ```sh
   $ git clone https://github.com/async4/inventapp.git
 ```
@@ -16,7 +16,7 @@
 ## 🏃 ***Run with idea***
 ![IMG](https://i.imgur.com/FrfUNQf.gif)
 
-## ***Layers***
+## 📌 ***Layers***
 ![IMG](https://i.imgur.com/jv6gSrn.png)
 ![IMG](https://i.imgur.com/UjNaNTR.png)
 
