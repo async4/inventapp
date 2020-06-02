@@ -13,7 +13,7 @@
   $ java -jar inventapp.jar
 ```
 
-## 🏃 ***Run with idea***
+## 🏃 ***Run with source***
 ![IMG](https://i.imgur.com/FrfUNQf.gif)
 
 ## 📌 ***Layers***
