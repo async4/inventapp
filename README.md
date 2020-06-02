@@ -8,7 +8,7 @@
   git clone https://github.com/async4/inventapp.git
 ```
 
-## Usage
+## Run with jar
 ```bash
   cd out/
 ```
@@ -16,6 +16,7 @@
 ```bash
   java -jar inventapp.jar
 ```
+
 ## Run with idea
 ![IMG](https://i.imgur.com/FrfUNQf.gif)
 
