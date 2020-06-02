@@ -3,17 +3,14 @@
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
 
 ## Installation
-```bash
-  git clone https://github.com/async4/inventapp.git
+```sh
+  $ git clone https://github.com/async4/inventapp.git
 ```
 
 ## Run with jar
-```bash
-  cd out/build/
-```
-
-```bash
-  java -jar inventapp.jar
+```sh
+  $ cd out/build/
+  $ java -jar inventapp.jar
 ```
 
 ##  Run with idea
