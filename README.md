@@ -10,7 +10,7 @@
 
 ## Run with jar
 ```bash
-  cd out/
+  cd out/build/
 ```
 
 ```bash
