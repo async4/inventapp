@@ -1,4 +1,6 @@
 # Inventapp
+[AngularJS] - HTML enhanced for web apps!
+
 ## Demo
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
 
