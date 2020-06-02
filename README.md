@@ -1,15 +1,13 @@
 # Inventapp
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
 ## Demo
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
 
-## Installation
+> Installation
 ```bash
   git clone https://github.com/async4/inventapp.git
 ```
 
-## Run with jar
+> Run with jar
 ```bash
   cd out/build/
 ```
@@ -18,10 +16,10 @@
   java -jar inventapp.jar
 ```
 
-## Run with idea
+>  Run with idea
 ![IMG](https://i.imgur.com/FrfUNQf.gif)
 
-## Layers
+>  Layers
 ![IMG](https://i.imgur.com/jv6gSrn.png)
 ![IMG](https://i.imgur.com/UjNaNTR.png)
 
