@@ -1,5 +1,4 @@
 # Inventapp
-[URL](https://www.youtube.com/)
 
 ## Demo
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
