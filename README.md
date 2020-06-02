@@ -1,4 +1,5 @@
 # Inventapp
+> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
 
 ## Demo
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
