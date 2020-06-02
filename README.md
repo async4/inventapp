@@ -24,6 +24,6 @@
 ### References
 - [Math for Game Developers](https://www.youtube.com/playlist?list=PLW3Zl3wyJwWOpdhYedlD-yCB7WQoHf-My)
 - [Let's Build a Game in Java](https://www.youtube.com/playlist?list=PLWms45O3n--6TvZmtFHaCWRZwEqnz2MHa)
-- [Java Swing Docs in Oracle](https://docs.oracle.com/javase/tutorial/uiswing/index.html)
+- [Java Swing Docs from Oracle](https://docs.oracle.com/javase/tutorial/uiswing/index.html)
 - [Stack Overflow](https://stackoverflow.com/)
 
