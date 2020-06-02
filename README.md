@@ -1,5 +1,5 @@
 # Inventapp
-[https://www.youtube.com/] - HTML enhanced for web apps!
+[URL](https://www.youtube.com/)
 
 ## Demo
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
