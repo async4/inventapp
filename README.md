@@ -7,6 +7,15 @@
 ```bash
   git clone https://github.com/async4/inventapp.git
 ```
+
+## Usage
+```bash
+  cd out/
+```
+
+```bash
+  java -jar inventapp.jar
+```
 ## Layers
 ![IMG](https://i.imgur.com/jv6gSrn.png)
 ![IMG](https://i.imgur.com/UjNaNTR.png)
