@@ -1,4 +1,5 @@
-# inventapp
+# Inventapp
+
 ## Demo
 ![IMG](https://i.imgur.com/nVDIKAJ.gif)
 
